@@ -1,0 +1,426 @@
+Genomic Selection Software: /qualstorzws01/data_zws/gs/bin/GenSel4R version 4.82R
+outFileCount 1
+ input model 
+ Merging animals with Phenotypes in Train.dat with Genotypes in SNP.dat.newbin
+Number of records read in genotype file:  10776
+Number of records in phenotype file:      7888
+Number of matching records:               7888
+Number of marker loci in model:           114890
+Number of fixed levels in model:          1
+rows cols = 10776 114890
+numberBytes that were read = 2476109280
+Starting a BayesC Bayesian analysis
+WARNING: Marker 72801 is monomorphic and should be excluded from the analysis 
+WARNING: Marker 98959 is monomorphic and should be excluded from the analysis 
+
+ iter 100 time to finish chain 33 hours 17 minutes 42 seconds 0.0563021 rounding 
+ iter 200 time to finish chain 34 hours 47 minutes 18 seconds 0.0566691 rounding 
+ iter 300 time to finish chain 35 hours 9 minutes 19 seconds 0.0562765 rounding 
+ iter 400 time to finish chain 34 hours 6 minutes 49 seconds 0.0552419 rounding 
+ iter 500 time to finish chain 33 hours 12 minutes 36 seconds 0.057089 rounding 
+ iter 600 time to finish chain 32 hours 27 minutes 7 seconds 0.0570393 rounding 
+ iter 700 time to finish chain 31 hours 46 minutes 40 seconds 0.0560749 rounding 
+ iter 800 time to finish chain 31 hours 36 minutes 11 seconds 0.0566825 rounding 
+ iter 900 time to finish chain 31 hours 27 minutes 0 seconds 0.0560532 rounding 
+ iter 1000 time to finish chain 31 hours 12 minutes 44 seconds 0.0561564 rounding 
+ iter 1100 time to finish chain 30 hours 56 minutes 38 seconds 0.0563904 rounding var(g-hat) 90.1661 corr 0.829627 regr 1.30023
+ iter 1200 time to finish chain 30 hours 44 minutes 41 seconds 0.0564636 rounding var(g-hat) 89.5744 corr 0.82979 regr 1.30477
+ iter 1300 time to finish chain 30 hours 35 minutes 56 seconds 0.0559163 rounding var(g-hat) 89.6351 corr 0.830551 regr 1.30552
+ iter 1400 time to finish chain 30 hours 27 minutes 19 seconds 0.056571 rounding var(g-hat) 89.6513 corr 0.830841 regr 1.30586
+ iter 1500 time to finish chain 30 hours 17 minutes 56 seconds 0.0560115 rounding var(g-hat) 89.6016 corr 0.830909 regr 1.30633
+ iter 1600 time to finish chain 30 hours 12 minutes 27 seconds 0.0567182 rounding var(g-hat) 89.5637 corr 0.830926 regr 1.30664
+ iter 1700 time to finish chain 30 hours 6 minutes 41 seconds 0.055606 rounding var(g-hat) 89.6721 corr 0.831226 regr 1.30632
+ iter 1800 time to finish chain 29 hours 59 minutes 58 seconds 0.055822 rounding var(g-hat) 89.597 corr 0.831116 regr 1.30669
+ iter 1900 time to finish chain 29 hours 54 minutes 31 seconds 0.0564346 rounding var(g-hat) 89.5153 corr 0.830876 regr 1.30691
+ iter 2000 time to finish chain 29 hours 46 minutes 53 seconds 0.0564728 rounding var(g-hat) 89.4858 corr 0.830872 regr 1.30712
+ iter 2100 time to finish chain 29 hours 31 minutes 31 seconds 0.0562812 rounding var(g-hat) 89.5008 corr 0.83093 regr 1.3071
+ iter 2200 time to finish chain 29 hours 16 minutes 54 seconds 0.0550308 rounding var(g-hat) 89.5241 corr 0.830988 regr 1.30702
+ iter 2300 time to finish chain 29 hours 1 minutes 32 seconds 0.0563633 rounding var(g-hat) 89.5525 corr 0.831085 regr 1.30697
+ iter 2400 time to finish chain 28 hours 53 minutes 49 seconds 0.0554918 rounding var(g-hat) 89.5829 corr 0.831138 regr 1.30683
+ iter 2500 time to finish chain 28 hours 43 minutes 33 seconds 0.0554006 rounding var(g-hat) 89.578 corr 0.831141 regr 1.30687
+ iter 2600 time to finish chain 28 hours 33 minutes 30 seconds 0.0570973 rounding var(g-hat) 89.5559 corr 0.831085 regr 1.30694
+ iter 2700 time to finish chain 28 hours 22 minutes 15 seconds 0.0567319 rounding var(g-hat) 89.5056 corr 0.830965 regr 1.30712
+ iter 2800 time to finish chain 28 hours 12 minutes 53 seconds 0.0563253 rounding var(g-hat) 89.531 corr 0.831071 regr 1.3071
+ iter 2900 time to finish chain 28 hours 1 minutes 15 seconds 0.0565098 rounding var(g-hat) 89.4756 corr 0.830972 regr 1.30735
+ iter 3000 time to finish chain 27 hours 55 minutes 11 seconds 0.0567064 rounding var(g-hat) 89.4659 corr 0.83096 regr 1.3074
+ iter 3100 time to finish chain 27 hours 45 minutes 23 seconds 0.0563622 rounding var(g-hat) 89.4328 corr 0.830892 regr 1.30754
+ iter 3200 time to finish chain 27 hours 41 minutes 39 seconds 0.0560133 rounding var(g-hat) 89.428 corr 0.830858 regr 1.30752
+ iter 3300 time to finish chain 27 hours 37 minutes 6 seconds 0.0572974 rounding var(g-hat) 89.4295 corr 0.830906 regr 1.30758
+ iter 3400 time to finish chain 27 hours 32 minutes 34 seconds 0.0557045 rounding var(g-hat) 89.4594 corr 0.83101 regr 1.30753
+ iter 3500 time to finish chain 27 hours 27 minutes 9 seconds 0.0564898 rounding var(g-hat) 89.5181 corr 0.831151 regr 1.30732
+ iter 3600 time to finish chain 27 hours 18 minutes 41 seconds 0.0554377 rounding var(g-hat) 89.5483 corr 0.831244 regr 1.30725
+ iter 3700 time to finish chain 27 hours 8 minutes 16 seconds 0.0556707 rounding var(g-hat) 89.5716 corr 0.831327 regr 1.30721
+ iter 3800 time to finish chain 27 hours 10 seconds 0.0557065 rounding var(g-hat) 89.5909 corr 0.831424 regr 1.30722
+ iter 3900 time to finish chain 26 hours 51 minutes 38 seconds 0.0564099 rounding var(g-hat) 89.5477 corr 0.83132 regr 1.30737
+ iter 4000 time to finish chain 26 hours 43 minutes 58 seconds 0.0564149 rounding var(g-hat) 89.5476 corr 0.831311 regr 1.30736
+ iter 4100 time to finish chain 26 hours 36 minutes 1 seconds 0.0549925 rounding var(g-hat) 89.5289 corr 0.831294 regr 1.30747
+ iter 4200 time to finish chain 26 hours 29 minutes 8 seconds 0.0561594 rounding var(g-hat) 89.5428 corr 0.831331 regr 1.30742
+ iter 4300 time to finish chain 26 hours 22 minutes 31 seconds 0.0561827 rounding var(g-hat) 89.522 corr 0.831295 regr 1.30752
+ iter 4400 time to finish chain 26 hours 17 minutes 0 seconds 0.0563019 rounding var(g-hat) 89.5482 corr 0.831362 regr 1.30743
+ iter 4500 time to finish chain 26 hours 11 minutes 48 seconds 0.0573198 rounding var(g-hat) 89.5476 corr 0.831367 regr 1.30745
+ iter 4600 time to finish chain 26 hours 5 minutes 20 seconds 0.0560981 rounding var(g-hat) 89.5472 corr 0.831334 regr 1.3074
+ iter 4700 time to finish chain 25 hours 58 minutes 58 seconds 0.0558735 rounding var(g-hat) 89.5428 corr 0.831331 regr 1.30742
+ iter 4800 time to finish chain 25 hours 53 minutes 58 seconds 0.0571358 rounding var(g-hat) 89.5296 corr 0.831292 regr 1.30746
+ iter 4900 time to finish chain 25 hours 49 minutes 29 seconds 0.0572352 rounding var(g-hat) 89.5299 corr 0.831317 regr 1.3075
+ iter 5000 time to finish chain 25 hours 46 minutes 41 seconds 0.0572415 rounding var(g-hat) 89.5157 corr 0.831279 regr 1.30754
+ iter 5100 time to finish chain 25 hours 44 minutes 52 seconds 0.0571879 rounding var(g-hat) 89.4945 corr 0.831211 regr 1.30759
+ iter 5200 time to finish chain 25 hours 43 minutes 32 seconds 0.0553003 rounding var(g-hat) 89.4909 corr 0.831208 regr 1.30761
+ iter 5300 time to finish chain 25 hours 42 minutes 10 seconds 0.0558264 rounding var(g-hat) 89.5003 corr 0.831236 regr 1.30758
+ iter 5400 time to finish chain 25 hours 42 minutes 33 seconds 0.0555366 rounding var(g-hat) 89.4991 corr 0.831234 regr 1.30759
+ iter 5500 time to finish chain 25 hours 42 minutes 12 seconds 0.055961 rounding var(g-hat) 89.4935 corr 0.831188 regr 1.30756
+ iter 5600 time to finish chain 25 hours 40 minutes 44 seconds 0.0562505 rounding var(g-hat) 89.4842 corr 0.831174 regr 1.30761
+ iter 5700 time to finish chain 25 hours 38 minutes 19 seconds 0.0549202 rounding var(g-hat) 89.4827 corr 0.831154 regr 1.30758
+ iter 5800 time to finish chain 25 hours 34 minutes 31 seconds 0.0562313 rounding var(g-hat) 89.4756 corr 0.831151 regr 1.30763
+ iter 5900 time to finish chain 25 hours 29 minutes 55 seconds 0.0571847 rounding var(g-hat) 89.4664 corr 0.831126 regr 1.30766
+ iter 6000 time to finish chain 25 hours 26 minutes 57 seconds 0.0553177 rounding var(g-hat) 89.4641 corr 0.831106 regr 1.30764
+ iter 6100 time to finish chain 25 hours 24 minutes 37 seconds 0.0570665 rounding var(g-hat) 89.4678 corr 0.831131 regr 1.30766
+ iter 6200 time to finish chain 25 hours 22 minutes 23 seconds 0.0561034 rounding var(g-hat) 89.4663 corr 0.831135 regr 1.30767
+ iter 6300 time to finish chain 25 hours 20 minutes 10 seconds 0.0558549 rounding var(g-hat) 89.4823 corr 0.83119 regr 1.30764
+ iter 6400 time to finish chain 25 hours 16 minutes 48 seconds 0.0582942 rounding var(g-hat) 89.4833 corr 0.831199 regr 1.30765
+ iter 6500 time to finish chain 25 hours 12 minutes 30 seconds 0.0558943 rounding var(g-hat) 89.4834 corr 0.831201 regr 1.30765
+ iter 6600 time to finish chain 25 hours 8 minutes 1 seconds 0.0558267 rounding var(g-hat) 89.4749 corr 0.831166 regr 1.30766
+ iter 6700 time to finish chain 25 hours 3 minutes 48 seconds 0.0562956 rounding var(g-hat) 89.4708 corr 0.831157 regr 1.30768
+ iter 6800 time to finish chain 24 hours 58 minutes 55 seconds 0.0555776 rounding var(g-hat) 89.4762 corr 0.831165 regr 1.30765
+ iter 6900 time to finish chain 24 hours 53 minutes 57 seconds 0.0563722 rounding var(g-hat) 89.4845 corr 0.831191 regr 1.30763
+ iter 7000 time to finish chain 24 hours 48 minutes 56 seconds 0.0572697 rounding var(g-hat) 89.4723 corr 0.831148 regr 1.30765
+ iter 7100 time to finish chain 24 hours 44 minutes 1 seconds 0.0562775 rounding var(g-hat) 89.4618 corr 0.831114 regr 1.30767
+ iter 7200 time to finish chain 24 hours 39 minutes 16 seconds 0.0570362 rounding var(g-hat) 89.4707 corr 0.831151 regr 1.30767
+ iter 7300 time to finish chain 24 hours 34 minutes 33 seconds 0.0559742 rounding var(g-hat) 89.4485 corr 0.831087 regr 1.30773
+ iter 7400 time to finish chain 24 hours 30 minutes 3 seconds 0.0558569 rounding var(g-hat) 89.4491 corr 0.83109 regr 1.30773
+ iter 7500 time to finish chain 24 hours 25 minutes 20 seconds 0.0553212 rounding var(g-hat) 89.4563 corr 0.831111 regr 1.30771
+ iter 7600 time to finish chain 24 hours 19 minutes 46 seconds 0.0562527 rounding var(g-hat) 89.444 corr 0.831069 regr 1.30773
+ iter 7700 time to finish chain 24 hours 15 minutes 35 seconds 0.0561926 rounding var(g-hat) 89.4491 corr 0.831073 regr 1.3077
+ iter 7800 time to finish chain 24 hours 11 minutes 12 seconds 0.0571054 rounding var(g-hat) 89.4494 corr 0.83109 regr 1.30773
+ iter 7900 time to finish chain 24 hours 6 minutes 32 seconds 0.0563166 rounding var(g-hat) 89.4497 corr 0.831094 regr 1.30773
+ iter 8000 time to finish chain 24 hours 54 seconds 0.0570633 rounding var(g-hat) 89.4344 corr 0.83107 regr 1.30781
+ iter 8100 time to finish chain 23 hours 55 minutes 27 seconds 0.0565145 rounding var(g-hat) 89.4529 corr 0.831105 regr 1.30773
+ iter 8200 time to finish chain 23 hours 50 minutes 18 seconds 0.0558173 rounding var(g-hat) 89.4662 corr 0.831147 regr 1.30769
+ iter 8300 time to finish chain 23 hours 45 minutes 42 seconds 0.0559265 rounding var(g-hat) 89.4712 corr 0.831151 regr 1.30766
+ iter 8400 time to finish chain 23 hours 40 minutes 28 seconds 0.0555171 rounding var(g-hat) 89.4684 corr 0.831148 regr 1.30768
+ iter 8500 time to finish chain 23 hours 35 minutes 7 seconds 0.0563095 rounding var(g-hat) 89.4662 corr 0.831145 regr 1.30769
+ iter 8600 time to finish chain 23 hours 30 minutes 4 seconds 0.0558017 rounding var(g-hat) 89.4717 corr 0.831158 regr 1.30767
+ iter 8700 time to finish chain 23 hours 25 minutes 1 seconds 0.0566582 rounding var(g-hat) 89.4762 corr 0.831176 regr 1.30767
+ iter 8800 time to finish chain 23 hours 20 minutes 18 seconds 0.0556904 rounding var(g-hat) 89.4782 corr 0.831184 regr 1.30766
+ iter 8900 time to finish chain 23 hours 15 minutes 18 seconds 0.0566162 rounding var(g-hat) 89.4579 corr 0.831152 regr 1.30776
+ iter 9000 time to finish chain 23 hours 10 minutes 8 seconds 0.0568741 rounding var(g-hat) 89.4609 corr 0.83117 regr 1.30777
+ iter 9100 time to finish chain 23 hours 4 minutes 56 seconds 0.0566387 rounding var(g-hat) 89.4546 corr 0.831148 regr 1.30778
+ iter 9200 time to finish chain 22 hours 59 minutes 49 seconds 0.0553419 rounding var(g-hat) 89.4649 corr 0.831181 regr 1.30776
+ iter 9300 time to finish chain 22 hours 54 minutes 46 seconds 0.056495 rounding var(g-hat) 89.4722 corr 0.831214 regr 1.30776
+ iter 9400 time to finish chain 22 hours 49 minutes 38 seconds 0.0565927 rounding var(g-hat) 89.4733 corr 0.831223 regr 1.30776
+ iter 9500 time to finish chain 22 hours 44 minutes 35 seconds 0.0567281 rounding var(g-hat) 89.4627 corr 0.831195 regr 1.30779
+ iter 9600 time to finish chain 22 hours 39 minutes 30 seconds 0.0552369 rounding var(g-hat) 89.463 corr 0.831198 regr 1.3078
+ iter 9700 time to finish chain 22 hours 34 minutes 35 seconds 0.057209 rounding var(g-hat) 89.4602 corr 0.831183 regr 1.3078
+ iter 9800 time to finish chain 22 hours 29 minutes 38 seconds 0.0564743 rounding var(g-hat) 89.4534 corr 0.831166 regr 1.30782
+ iter 9900 time to finish chain 22 hours 24 minutes 45 seconds 0.0557962 rounding var(g-hat) 89.4544 corr 0.831168 regr 1.30781
+ iter 10000 time to finish chain 22 hours 20 minutes 6 seconds 0.0562357 rounding var(g-hat) 89.4518 corr 0.831172 regr 1.30784
+ iter 10100 time to finish chain 22 hours 15 minutes 6 seconds 0.0561966 rounding var(g-hat) 89.4486 corr 0.831172 regr 1.30786
+ iter 10200 time to finish chain 22 hours 10 minutes 9 seconds 0.0563188 rounding var(g-hat) 89.4533 corr 0.831178 regr 1.30784
+ iter 10300 time to finish chain 22 hours 5 minutes 20 seconds 0.0570342 rounding var(g-hat) 89.4541 corr 0.831169 regr 1.30782
+ iter 10400 time to finish chain 22 hours 34 seconds 0.0559045 rounding var(g-hat) 89.4398 corr 0.831144 regr 1.30788
+ iter 10500 time to finish chain 21 hours 55 minutes 35 seconds 0.0551301 rounding var(g-hat) 89.4483 corr 0.831168 regr 1.30786
+ iter 10600 time to finish chain 21 hours 49 minutes 59 seconds 0.0555771 rounding var(g-hat) 89.4474 corr 0.831162 regr 1.30785
+ iter 10700 time to finish chain 21 hours 44 minutes 31 seconds 0.0566009 rounding var(g-hat) 89.4478 corr 0.831158 regr 1.30785
+ iter 10800 time to finish chain 21 hours 38 minutes 51 seconds 0.0566869 rounding var(g-hat) 89.4492 corr 0.831165 regr 1.30785
+ iter 10900 time to finish chain 21 hours 33 minutes 29 seconds 0.0563291 rounding var(g-hat) 89.4454 corr 0.831169 regr 1.30788
+ iter 11000 time to finish chain 21 hours 28 minutes 23 seconds 0.0554881 rounding var(g-hat) 89.4472 corr 0.831177 regr 1.30788
+ iter 11100 time to finish chain 21 hours 23 minutes 9 seconds 0.0560177 rounding var(g-hat) 89.4437 corr 0.831172 regr 1.3079
+ iter 11200 time to finish chain 21 hours 17 minutes 44 seconds 0.0566596 rounding var(g-hat) 89.4457 corr 0.831176 regr 1.30789
+ iter 11300 time to finish chain 21 hours 12 minutes 18 seconds 0.0565437 rounding var(g-hat) 89.446 corr 0.831193 regr 1.30791
+ iter 11400 time to finish chain 21 hours 7 minutes 1 seconds 0.0564257 rounding var(g-hat) 89.4492 corr 0.831204 regr 1.30791
+ iter 11500 time to finish chain 21 hours 1 minutes 48 seconds 0.0559778 rounding var(g-hat) 89.4531 corr 0.831209 regr 1.30789
+ iter 11600 time to finish chain 20 hours 57 minutes 7 seconds 0.0558313 rounding var(g-hat) 89.4547 corr 0.831213 regr 1.30788
+ iter 11700 time to finish chain 20 hours 52 minutes 34 seconds 0.0551262 rounding var(g-hat) 89.4576 corr 0.831216 regr 1.30786
+ iter 11800 time to finish chain 20 hours 47 minutes 39 seconds 0.0567016 rounding var(g-hat) 89.4587 corr 0.831219 regr 1.30786
+ iter 11900 time to finish chain 20 hours 41 minutes 34 seconds 0.055399 rounding var(g-hat) 89.4754 corr 0.831258 regr 1.3078
+ iter 12000 time to finish chain 20 hours 35 minutes 3 seconds 0.0567109 rounding var(g-hat) 89.4773 corr 0.831261 regr 1.30779
+ iter 12100 time to finish chain 20 hours 28 minutes 23 seconds 0.0553187 rounding var(g-hat) 89.4841 corr 0.831282 regr 1.30778
+ iter 12200 time to finish chain 20 hours 21 minutes 34 seconds 0.0554165 rounding var(g-hat) 89.4804 corr 0.831268 regr 1.30778
+ iter 12300 time to finish chain 20 hours 15 minutes 1 seconds 0.0567482 rounding var(g-hat) 89.4729 corr 0.831249 regr 1.3078
+ iter 12400 time to finish chain 20 hours 8 minutes 49 seconds 0.0569319 rounding var(g-hat) 89.468 corr 0.831241 regr 1.30783
+ iter 12500 time to finish chain 20 hours 2 minutes 22 seconds 0.0565125 rounding var(g-hat) 89.4726 corr 0.831253 regr 1.30781
+ iter 12600 time to finish chain 19 hours 56 minutes 11 seconds 0.0561327 rounding var(g-hat) 89.4791 corr 0.831278 regr 1.3078
+ iter 12700 time to finish chain 19 hours 50 minutes 1 seconds 0.0557062 rounding var(g-hat) 89.47 corr 0.831257 regr 1.30784
+ iter 12800 time to finish chain 19 hours 44 minutes 11 seconds 0.0562927 rounding var(g-hat) 89.4666 corr 0.831252 regr 1.30786
+ iter 12900 time to finish chain 19 hours 37 minutes 51 seconds 0.056078 rounding var(g-hat) 89.464 corr 0.831245 regr 1.30786
+ iter 13000 time to finish chain 19 hours 31 minutes 42 seconds 0.0565216 rounding var(g-hat) 89.4657 corr 0.831245 regr 1.30785
+ iter 13100 time to finish chain 19 hours 25 minutes 33 seconds 0.0558689 rounding var(g-hat) 89.4691 corr 0.831259 regr 1.30785
+ iter 13200 time to finish chain 19 hours 19 minutes 23 seconds 0.0558091 rounding var(g-hat) 89.4709 corr 0.831257 regr 1.30783
+ iter 13300 time to finish chain 19 hours 13 minutes 43 seconds 0.0557694 rounding var(g-hat) 89.474 corr 0.831267 regr 1.30783
+ iter 13400 time to finish chain 19 hours 7 minutes 38 seconds 0.0551344 rounding var(g-hat) 89.4712 corr 0.831259 regr 1.30783
+ iter 13500 time to finish chain 19 hours 1 minutes 46 seconds 0.0568901 rounding var(g-hat) 89.4661 corr 0.831246 regr 1.30785
+ iter 13600 time to finish chain 18 hours 55 minutes 56 seconds 0.0554287 rounding var(g-hat) 89.4629 corr 0.831232 regr 1.30785
+ iter 13700 time to finish chain 18 hours 49 minutes 40 seconds 0.0562299 rounding var(g-hat) 89.4635 corr 0.831237 regr 1.30786
+ iter 13800 time to finish chain 18 hours 43 minutes 21 seconds 0.0560959 rounding var(g-hat) 89.4658 corr 0.831236 regr 1.30784
+ iter 13900 time to finish chain 18 hours 37 minutes 16 seconds 0.0559336 rounding var(g-hat) 89.4642 corr 0.831237 regr 1.30785
+ iter 14000 time to finish chain 18 hours 31 minutes 11 seconds 0.0569957 rounding var(g-hat) 89.4676 corr 0.831244 regr 1.30784
+ iter 14100 time to finish chain 18 hours 24 minutes 58 seconds 0.0573307 rounding var(g-hat) 89.4696 corr 0.831258 regr 1.30784
+ iter 14200 time to finish chain 18 hours 19 minutes 9 seconds 0.0564219 rounding var(g-hat) 89.4678 corr 0.831257 regr 1.30786
+ iter 14300 time to finish chain 18 hours 13 minutes 25 seconds 0.0559929 rounding var(g-hat) 89.4663 corr 0.831256 regr 1.30787
+ iter 14400 time to finish chain 18 hours 7 minutes 24 seconds 0.0567231 rounding var(g-hat) 89.4684 corr 0.831262 regr 1.30786
+ iter 14500 time to finish chain 18 hours 1 minutes 37 seconds 0.0561825 rounding var(g-hat) 89.4744 corr 0.831279 regr 1.30784
+ iter 14600 time to finish chain 17 hours 55 minutes 46 seconds 0.0564685 rounding var(g-hat) 89.4702 corr 0.831264 regr 1.30785
+ iter 14700 time to finish chain 17 hours 49 minutes 50 seconds 0.056121 rounding var(g-hat) 89.4707 corr 0.831261 regr 1.30784
+ iter 14800 time to finish chain 17 hours 43 minutes 59 seconds 0.0562244 rounding var(g-hat) 89.4694 corr 0.831261 regr 1.30785
+ iter 14900 time to finish chain 17 hours 38 minutes 9 seconds 0.0566749 rounding var(g-hat) 89.4662 corr 0.831249 regr 1.30785
+ iter 15000 time to finish chain 17 hours 32 minutes 22 seconds 0.0566113 rounding var(g-hat) 89.467 corr 0.831255 regr 1.30786
+ iter 15100 time to finish chain 17 hours 26 minutes 26 seconds 0.0569833 rounding var(g-hat) 89.4644 corr 0.831248 regr 1.30787
+ iter 15200 time to finish chain 17 hours 20 minutes 37 seconds 0.0575212 rounding var(g-hat) 89.4638 corr 0.831247 regr 1.30787
+ iter 15300 time to finish chain 17 hours 14 minutes 51 seconds 0.0552823 rounding var(g-hat) 89.4646 corr 0.831254 regr 1.30787
+ iter 15400 time to finish chain 17 hours 9 minutes 12 seconds 0.056447 rounding var(g-hat) 89.4715 corr 0.83127 regr 1.30785
+ iter 15500 time to finish chain 17 hours 3 minutes 34 seconds 0.0560059 rounding var(g-hat) 89.4716 corr 0.831265 regr 1.30784
+ iter 15600 time to finish chain 16 hours 57 minutes 41 seconds 0.0558576 rounding var(g-hat) 89.4767 corr 0.831279 regr 1.30782
+ iter 15700 time to finish chain 16 hours 51 minutes 39 seconds 0.0563979 rounding var(g-hat) 89.4755 corr 0.83128 regr 1.30784
+ iter 15800 time to finish chain 16 hours 45 minutes 20 seconds 0.056068 rounding var(g-hat) 89.4814 corr 0.831291 regr 1.30781
+ iter 15900 time to finish chain 16 hours 39 minutes 4 seconds 0.0574812 rounding var(g-hat) 89.4834 corr 0.831298 regr 1.30781
+ iter 16000 time to finish chain 16 hours 32 minutes 48 seconds 0.0555577 rounding var(g-hat) 89.4842 corr 0.831299 regr 1.3078
+ iter 16100 time to finish chain 16 hours 26 minutes 40 seconds 0.0562337 rounding var(g-hat) 89.4769 corr 0.831277 regr 1.30782
+ iter 16200 time to finish chain 16 hours 20 minutes 28 seconds 0.0550615 rounding var(g-hat) 89.4753 corr 0.831273 regr 1.30782
+ iter 16300 time to finish chain 16 hours 14 minutes 20 seconds 0.0571599 rounding var(g-hat) 89.4748 corr 0.831274 regr 1.30783
+ iter 16400 time to finish chain 16 hours 8 minutes 15 seconds 0.0568902 rounding var(g-hat) 89.472 corr 0.831266 regr 1.30784
+ iter 16500 time to finish chain 16 hours 2 minutes 13 seconds 0.0560848 rounding var(g-hat) 89.468 corr 0.831255 regr 1.30785
+ iter 16600 time to finish chain 15 hours 56 minutes 19 seconds 0.0565167 rounding var(g-hat) 89.4633 corr 0.83124 regr 1.30786
+ iter 16700 time to finish chain 15 hours 50 minutes 20 seconds 0.0558875 rounding var(g-hat) 89.4639 corr 0.831241 regr 1.30786
+ iter 16800 time to finish chain 15 hours 44 minutes 28 seconds 0.0558673 rounding var(g-hat) 89.4634 corr 0.831243 regr 1.30787
+ iter 16900 time to finish chain 15 hours 38 minutes 41 seconds 0.0561014 rounding var(g-hat) 89.4625 corr 0.831245 regr 1.30788
+ iter 17000 time to finish chain 15 hours 32 minutes 49 seconds 0.0560651 rounding var(g-hat) 89.4611 corr 0.831242 regr 1.30788
+ iter 17100 time to finish chain 15 hours 27 minutes 1 seconds 0.0558386 rounding var(g-hat) 89.4631 corr 0.831242 regr 1.30787
+ iter 17200 time to finish chain 15 hours 21 minutes 15 seconds 0.0559531 rounding var(g-hat) 89.466 corr 0.831252 regr 1.30786
+ iter 17300 time to finish chain 15 hours 15 minutes 30 seconds 0.0564036 rounding var(g-hat) 89.4597 corr 0.831234 regr 1.30788
+ iter 17400 time to finish chain 15 hours 9 minutes 51 seconds 0.0561724 rounding var(g-hat) 89.4554 corr 0.831221 regr 1.30789
+ iter 17500 time to finish chain 15 hours 4 minutes 15 seconds 0.0555628 rounding var(g-hat) 89.4556 corr 0.831222 regr 1.30789
+ iter 17600 time to finish chain 14 hours 58 minutes 42 seconds 0.0557838 rounding var(g-hat) 89.4584 corr 0.831227 regr 1.30788
+ iter 17700 time to finish chain 14 hours 53 minutes 13 seconds 0.0558947 rounding var(g-hat) 89.4576 corr 0.831223 regr 1.30788
+ iter 17800 time to finish chain 14 hours 47 minutes 43 seconds 0.0560203 rounding var(g-hat) 89.4593 corr 0.831227 regr 1.30787
+ iter 17900 time to finish chain 14 hours 42 minutes 24 seconds 0.0572242 rounding var(g-hat) 89.4638 corr 0.831237 regr 1.30785
+ iter 18000 time to finish chain 14 hours 36 minutes 57 seconds 0.0565681 rounding var(g-hat) 89.464 corr 0.831239 regr 1.30785
+ iter 18100 time to finish chain 14 hours 31 minutes 32 seconds 0.0554176 rounding var(g-hat) 89.4612 corr 0.831231 regr 1.30786
+ iter 18200 time to finish chain 14 hours 26 minutes 12 seconds 0.0562073 rounding var(g-hat) 89.4641 corr 0.831235 regr 1.30785
+ iter 18300 time to finish chain 14 hours 21 minutes 2 seconds 0.056351 rounding var(g-hat) 89.4594 corr 0.831223 regr 1.30786
+ iter 18400 time to finish chain 14 hours 15 minutes 42 seconds 0.0562907 rounding var(g-hat) 89.458 corr 0.831218 regr 1.30787
+ iter 18500 time to finish chain 14 hours 10 minutes 17 seconds 0.0565917 rounding var(g-hat) 89.4549 corr 0.831211 regr 1.30788
+ iter 18600 time to finish chain 14 hours 5 minutes 14 seconds 0.0566217 rounding var(g-hat) 89.4551 corr 0.831209 regr 1.30787
+ iter 18700 time to finish chain 14 hours 2 seconds 0.0561023 rounding var(g-hat) 89.4518 corr 0.8312 regr 1.30788
+ iter 18800 time to finish chain 13 hours 54 minutes 43 seconds 0.0567295 rounding var(g-hat) 89.4474 corr 0.831188 regr 1.3079
+ iter 18900 time to finish chain 13 hours 49 minutes 35 seconds 0.0573543 rounding var(g-hat) 89.4458 corr 0.831184 regr 1.3079
+ iter 19000 time to finish chain 13 hours 44 minutes 21 seconds 0.056463 rounding var(g-hat) 89.4447 corr 0.831174 regr 1.30789
+ iter 19100 time to finish chain 13 hours 39 minutes 9 seconds 0.0562246 rounding var(g-hat) 89.4436 corr 0.831174 regr 1.3079
+ iter 19200 time to finish chain 13 hours 33 minutes 59 seconds 0.0557469 rounding var(g-hat) 89.4503 corr 0.831192 regr 1.30788
+ iter 19300 time to finish chain 13 hours 28 minutes 54 seconds 0.0549578 rounding var(g-hat) 89.4486 corr 0.83119 regr 1.30789
+ iter 19400 time to finish chain 13 hours 23 minutes 50 seconds 0.055682 rounding var(g-hat) 89.4468 corr 0.831185 regr 1.30789
+ iter 19500 time to finish chain 13 hours 18 minutes 47 seconds 0.0567574 rounding var(g-hat) 89.4433 corr 0.831177 regr 1.30791
+ iter 19600 time to finish chain 13 hours 13 minutes 44 seconds 0.0568178 rounding var(g-hat) 89.4406 corr 0.831171 regr 1.30792
+ iter 19700 time to finish chain 13 hours 8 minutes 42 seconds 0.0554915 rounding var(g-hat) 89.4411 corr 0.831169 regr 1.30791
+ iter 19800 time to finish chain 13 hours 3 minutes 44 seconds 0.0561149 rounding var(g-hat) 89.4417 corr 0.831171 regr 1.30791
+ iter 19900 time to finish chain 12 hours 58 minutes 48 seconds 0.0561549 rounding var(g-hat) 89.4403 corr 0.831168 regr 1.30792
+ iter 20000 time to finish chain 12 hours 53 minutes 50 seconds 0.0555101 rounding var(g-hat) 89.4371 corr 0.831157 regr 1.30792
+ iter 20100 time to finish chain 12 hours 48 minutes 56 seconds 0.0565509 rounding var(g-hat) 89.4352 corr 0.831152 regr 1.30793
+ iter 20200 time to finish chain 12 hours 44 minutes 4 seconds 0.0560321 rounding var(g-hat) 89.4305 corr 0.831138 regr 1.30794
+ iter 20300 time to finish chain 12 hours 39 minutes 12 seconds 0.0548154 rounding var(g-hat) 89.4283 corr 0.831132 regr 1.30795
+ iter 20400 time to finish chain 12 hours 34 minutes 22 seconds 0.0557598 rounding var(g-hat) 89.4322 corr 0.831138 regr 1.30793
+ iter 20500 time to finish chain 12 hours 29 minutes 30 seconds 0.0561505 rounding var(g-hat) 89.4308 corr 0.831135 regr 1.30793
+ iter 20600 time to finish chain 12 hours 24 minutes 43 seconds 0.0567192 rounding var(g-hat) 89.4275 corr 0.831127 regr 1.30795
+ iter 20700 time to finish chain 12 hours 19 minutes 58 seconds 0.056322 rounding var(g-hat) 89.4306 corr 0.831136 regr 1.30794
+ iter 20800 time to finish chain 12 hours 15 minutes 15 seconds 0.0543131 rounding var(g-hat) 89.4314 corr 0.831137 regr 1.30793
+ iter 20900 time to finish chain 12 hours 10 minutes 47 seconds 0.0574314 rounding var(g-hat) 89.4276 corr 0.83113 regr 1.30795
+ iter 21000 time to finish chain 12 hours 6 minutes 25 seconds 0.0547615 rounding var(g-hat) 89.4263 corr 0.83113 regr 1.30796
+ iter 21100 time to finish chain 12 hours 2 minutes 2 seconds 0.0568394 rounding var(g-hat) 89.4266 corr 0.831132 regr 1.30796
+ iter 21200 time to finish chain 11 hours 57 minutes 25 seconds 0.0554505 rounding var(g-hat) 89.4286 corr 0.831139 regr 1.30796
+ iter 21300 time to finish chain 11 hours 52 minutes 57 seconds 0.056356 rounding var(g-hat) 89.4296 corr 0.831144 regr 1.30796
+ iter 21400 time to finish chain 11 hours 48 minutes 13 seconds 0.0568292 rounding var(g-hat) 89.4259 corr 0.831129 regr 1.30796
+ iter 21500 time to finish chain 11 hours 43 minutes 31 seconds 0.05575 rounding var(g-hat) 89.4284 corr 0.831132 regr 1.30795
+ iter 21600 time to finish chain 11 hours 38 minutes 59 seconds 0.0563939 rounding var(g-hat) 89.4295 corr 0.831134 regr 1.30794
+ iter 21700 time to finish chain 11 hours 34 minutes 17 seconds 0.0564353 rounding var(g-hat) 89.4251 corr 0.831122 regr 1.30795
+ iter 21800 time to finish chain 11 hours 29 minutes 37 seconds 0.056779 rounding var(g-hat) 89.4263 corr 0.831125 regr 1.30795
+ iter 21900 time to finish chain 11 hours 25 minutes 8 seconds 0.0561752 rounding var(g-hat) 89.4303 corr 0.831129 regr 1.30793
+ iter 22000 time to finish chain 11 hours 20 minutes 44 seconds 0.0562268 rounding var(g-hat) 89.4296 corr 0.831132 regr 1.30794
+ iter 22100 time to finish chain 11 hours 16 minutes 15 seconds 0.0573977 rounding var(g-hat) 89.4274 corr 0.831126 regr 1.30794
+ iter 22200 time to finish chain 11 hours 11 minutes 53 seconds 0.0555012 rounding var(g-hat) 89.4267 corr 0.831124 regr 1.30795
+ iter 22300 time to finish chain 11 hours 7 minutes 24 seconds 0.0559098 rounding var(g-hat) 89.4284 corr 0.83113 regr 1.30794
+ iter 22400 time to finish chain 11 hours 2 minutes 53 seconds 0.0562378 rounding var(g-hat) 89.4334 corr 0.831145 regr 1.30793
+ iter 22500 time to finish chain 10 hours 58 minutes 38 seconds 0.0560295 rounding var(g-hat) 89.431 corr 0.83114 regr 1.30794
+ iter 22600 time to finish chain 10 hours 54 minutes 15 seconds 0.0559674 rounding var(g-hat) 89.4277 corr 0.831135 regr 1.30796
+ iter 22700 time to finish chain 10 hours 49 minutes 51 seconds 0.0564487 rounding var(g-hat) 89.4253 corr 0.831128 regr 1.30796
+ iter 22800 time to finish chain 10 hours 45 minutes 27 seconds 0.0572214 rounding var(g-hat) 89.4256 corr 0.831128 regr 1.30796
+ iter 22900 time to finish chain 10 hours 41 minutes 1 seconds 0.0548342 rounding var(g-hat) 89.4296 corr 0.831141 regr 1.30795
+ iter 23000 time to finish chain 10 hours 36 minutes 34 seconds 0.0565507 rounding var(g-hat) 89.4287 corr 0.831139 regr 1.30795
+ iter 23100 time to finish chain 10 hours 32 minutes 23 seconds 0.0560362 rounding var(g-hat) 89.4295 corr 0.831139 regr 1.30795
+ iter 23200 time to finish chain 10 hours 28 minutes 6 seconds 0.0570915 rounding var(g-hat) 89.4283 corr 0.831139 regr 1.30796
+ iter 23300 time to finish chain 10 hours 24 minutes 2 seconds 0.0559596 rounding var(g-hat) 89.4303 corr 0.831147 regr 1.30796
+ iter 23400 time to finish chain 10 hours 19 minutes 47 seconds 0.0563704 rounding var(g-hat) 89.4311 corr 0.831147 regr 1.30795
+ iter 23500 time to finish chain 10 hours 15 minutes 25 seconds 0.0564078 rounding var(g-hat) 89.4295 corr 0.831141 regr 1.30795
+ iter 23600 time to finish chain 10 hours 10 minutes 55 seconds 0.0564487 rounding var(g-hat) 89.4311 corr 0.831142 regr 1.30794
+ iter 23700 time to finish chain 10 hours 6 minutes 27 seconds 0.0561643 rounding var(g-hat) 89.4306 corr 0.831143 regr 1.30795
+ iter 23800 time to finish chain 10 hours 2 minutes 0 seconds 0.0572988 rounding var(g-hat) 89.4301 corr 0.831139 regr 1.30794
+ iter 23900 time to finish chain 9 hours 57 minutes 34 seconds 0.0559657 rounding var(g-hat) 89.4325 corr 0.831144 regr 1.30794
+ iter 24000 time to finish chain 9 hours 53 minutes 0 seconds 0.0554304 rounding var(g-hat) 89.4338 corr 0.83115 regr 1.30793
+ iter 24100 time to finish chain 9 hours 48 minutes 29 seconds 0.0559399 rounding var(g-hat) 89.4333 corr 0.831147 regr 1.30794
+ iter 24200 time to finish chain 9 hours 44 minutes 0 seconds 0.0572293 rounding var(g-hat) 89.4319 corr 0.831144 regr 1.30794
+ iter 24300 time to finish chain 9 hours 39 minutes 30 seconds 0.0570869 rounding var(g-hat) 89.4366 corr 0.831155 regr 1.30792
+ iter 24400 time to finish chain 9 hours 35 minutes 2 seconds 0.0556713 rounding var(g-hat) 89.4315 corr 0.831143 regr 1.30794
+ iter 24500 time to finish chain 9 hours 30 minutes 36 seconds 0.0570041 rounding var(g-hat) 89.4256 corr 0.831129 regr 1.30796
+ iter 24600 time to finish chain 9 hours 26 minutes 13 seconds 0.0568337 rounding var(g-hat) 89.4271 corr 0.831131 regr 1.30795
+ iter 24700 time to finish chain 9 hours 21 minutes 42 seconds 0.0571309 rounding var(g-hat) 89.4236 corr 0.83112 regr 1.30796
+ iter 24800 time to finish chain 9 hours 17 minutes 11 seconds 0.0557008 rounding var(g-hat) 89.4246 corr 0.83112 regr 1.30796
+ iter 24900 time to finish chain 9 hours 12 minutes 41 seconds 0.0564624 rounding var(g-hat) 89.4243 corr 0.831118 regr 1.30795
+ iter 25000 time to finish chain 9 hours 8 minutes 13 seconds 0.0569535 rounding var(g-hat) 89.4274 corr 0.831125 regr 1.30794
+ iter 25100 time to finish chain 9 hours 3 minutes 45 seconds 0.0551184 rounding var(g-hat) 89.4264 corr 0.831124 regr 1.30795
+ iter 25200 time to finish chain 8 hours 59 minutes 19 seconds 0.0572434 rounding var(g-hat) 89.423 corr 0.831111 regr 1.30795
+ iter 25300 time to finish chain 8 hours 54 minutes 54 seconds 0.0557849 rounding var(g-hat) 89.423 corr 0.831113 regr 1.30796
+ iter 25400 time to finish chain 8 hours 50 minutes 31 seconds 0.0563876 rounding var(g-hat) 89.4218 corr 0.831109 regr 1.30796
+ iter 25500 time to finish chain 8 hours 46 minutes 11 seconds 0.056619 rounding var(g-hat) 89.4207 corr 0.831103 regr 1.30796
+ iter 25600 time to finish chain 8 hours 41 minutes 49 seconds 0.0557996 rounding var(g-hat) 89.4206 corr 0.8311 regr 1.30795
+ iter 25700 time to finish chain 8 hours 37 minutes 29 seconds 0.0569781 rounding var(g-hat) 89.4198 corr 0.831099 regr 1.30796
+ iter 25800 time to finish chain 8 hours 33 minutes 12 seconds 0.0563664 rounding var(g-hat) 89.4232 corr 0.831105 regr 1.30794
+ iter 25900 time to finish chain 8 hours 28 minutes 54 seconds 0.0574352 rounding var(g-hat) 89.4193 corr 0.831094 regr 1.30795
+ iter 26000 time to finish chain 8 hours 24 minutes 40 seconds 0.0561605 rounding var(g-hat) 89.4204 corr 0.831096 regr 1.30795
+ iter 26100 time to finish chain 8 hours 20 minutes 29 seconds 0.0568082 rounding var(g-hat) 89.42 corr 0.831098 regr 1.30795
+ iter 26200 time to finish chain 8 hours 16 minutes 15 seconds 0.0563852 rounding var(g-hat) 89.4193 corr 0.831095 regr 1.30795
+ iter 26300 time to finish chain 8 hours 12 minutes 2 seconds 0.0555742 rounding var(g-hat) 89.42 corr 0.831096 regr 1.30795
+ iter 26400 time to finish chain 8 hours 7 minutes 50 seconds 0.0557889 rounding var(g-hat) 89.4191 corr 0.83109 regr 1.30795
+ iter 26500 time to finish chain 8 hours 3 minutes 39 seconds 0.0558908 rounding var(g-hat) 89.4181 corr 0.831088 regr 1.30795
+ iter 26600 time to finish chain 7 hours 59 minutes 31 seconds 0.0561128 rounding var(g-hat) 89.4206 corr 0.831094 regr 1.30794
+ iter 26700 time to finish chain 7 hours 55 minutes 22 seconds 0.0563639 rounding var(g-hat) 89.4201 corr 0.831094 regr 1.30795
+ iter 26800 time to finish chain 7 hours 51 minutes 14 seconds 0.0560248 rounding var(g-hat) 89.417 corr 0.831084 regr 1.30795
+ iter 26900 time to finish chain 7 hours 47 minutes 7 seconds 0.0560883 rounding var(g-hat) 89.4204 corr 0.831094 regr 1.30795
+ iter 27000 time to finish chain 7 hours 43 minutes 1 seconds 0.0564117 rounding var(g-hat) 89.4177 corr 0.831084 regr 1.30795
+ iter 27100 time to finish chain 7 hours 38 minutes 56 seconds 0.0558308 rounding var(g-hat) 89.4176 corr 0.831084 regr 1.30795
+ iter 27200 time to finish chain 7 hours 34 minutes 53 seconds 0.0560252 rounding var(g-hat) 89.4195 corr 0.83109 regr 1.30795
+ iter 27300 time to finish chain 7 hours 30 minutes 51 seconds 0.0568452 rounding var(g-hat) 89.4187 corr 0.831087 regr 1.30795
+ iter 27400 time to finish chain 7 hours 26 minutes 49 seconds 0.0561726 rounding var(g-hat) 89.4228 corr 0.831095 regr 1.30793
+ iter 27500 time to finish chain 7 hours 22 minutes 48 seconds 0.0565881 rounding var(g-hat) 89.4194 corr 0.831087 regr 1.30794
+ iter 27600 time to finish chain 7 hours 18 minutes 49 seconds 0.0565506 rounding var(g-hat) 89.4194 corr 0.831087 regr 1.30794
+ iter 27700 time to finish chain 7 hours 14 minutes 50 seconds 0.0560837 rounding var(g-hat) 89.4197 corr 0.831089 regr 1.30794
+ iter 27800 time to finish chain 7 hours 10 minutes 52 seconds 0.0565957 rounding var(g-hat) 89.4225 corr 0.831094 regr 1.30793
+ iter 27900 time to finish chain 7 hours 6 minutes 55 seconds 0.0575141 rounding var(g-hat) 89.4216 corr 0.831092 regr 1.30793
+ iter 28000 time to finish chain 7 hours 2 minutes 59 seconds 0.0556746 rounding var(g-hat) 89.4231 corr 0.831092 regr 1.30792
+ iter 28100 time to finish chain 6 hours 59 minutes 4 seconds 0.0558862 rounding var(g-hat) 89.4233 corr 0.831094 regr 1.30792
+ iter 28200 time to finish chain 6 hours 55 minutes 10 seconds 0.056466 rounding var(g-hat) 89.4238 corr 0.831095 regr 1.30792
+ iter 28300 time to finish chain 6 hours 51 minutes 16 seconds 0.0561978 rounding var(g-hat) 89.4253 corr 0.831102 regr 1.30792
+ iter 28400 time to finish chain 6 hours 47 minutes 24 seconds 0.0555415 rounding var(g-hat) 89.4281 corr 0.831106 regr 1.30791
+ iter 28500 time to finish chain 6 hours 43 minutes 33 seconds 0.0568341 rounding var(g-hat) 89.4286 corr 0.83111 regr 1.30791
+ iter 28600 time to finish chain 6 hours 39 minutes 42 seconds 0.0559694 rounding var(g-hat) 89.4302 corr 0.831114 regr 1.30791
+ iter 28700 time to finish chain 6 hours 35 minutes 52 seconds 0.0554115 rounding var(g-hat) 89.4308 corr 0.831118 regr 1.30791
+ iter 28800 time to finish chain 6 hours 32 minutes 3 seconds 0.0562976 rounding var(g-hat) 89.4258 corr 0.831105 regr 1.30792
+ iter 28900 time to finish chain 6 hours 28 minutes 15 seconds 0.0562601 rounding var(g-hat) 89.4253 corr 0.831104 regr 1.30792
+ iter 29000 time to finish chain 6 hours 24 minutes 27 seconds 0.056352 rounding var(g-hat) 89.4255 corr 0.831104 regr 1.30792
+ iter 29100 time to finish chain 6 hours 20 minutes 41 seconds 0.0557346 rounding var(g-hat) 89.4293 corr 0.831115 regr 1.30791
+ iter 29200 time to finish chain 6 hours 16 minutes 55 seconds 0.0567146 rounding var(g-hat) 89.4276 corr 0.831114 regr 1.30792
+ iter 29300 time to finish chain 6 hours 13 minutes 10 seconds 0.0565114 rounding var(g-hat) 89.4315 corr 0.831126 regr 1.30791
+ iter 29400 time to finish chain 6 hours 9 minutes 25 seconds 0.0565838 rounding var(g-hat) 89.4322 corr 0.83113 regr 1.30792
+ iter 29500 time to finish chain 6 hours 5 minutes 42 seconds 0.0567709 rounding var(g-hat) 89.4309 corr 0.831125 regr 1.30792
+ iter 29600 time to finish chain 6 hours 1 minutes 59 seconds 0.0560192 rounding var(g-hat) 89.4317 corr 0.831127 regr 1.30791
+ iter 29700 time to finish chain 5 hours 58 minutes 18 seconds 0.0558904 rounding var(g-hat) 89.4311 corr 0.831125 regr 1.30792
+ iter 29800 time to finish chain 5 hours 54 minutes 37 seconds 0.0565999 rounding var(g-hat) 89.4319 corr 0.831126 regr 1.30791
+ iter 29900 time to finish chain 5 hours 50 minutes 56 seconds 0.0564017 rounding var(g-hat) 89.4289 corr 0.831121 regr 1.30793
+ iter 30000 time to finish chain 5 hours 47 minutes 16 seconds 0.0564501 rounding var(g-hat) 89.4301 corr 0.831124 regr 1.30792
+ iter 30100 time to finish chain 5 hours 43 minutes 37 seconds 0.0566605 rounding var(g-hat) 89.4305 corr 0.831126 regr 1.30792
+ iter 30200 time to finish chain 5 hours 39 minutes 59 seconds 0.0564426 rounding var(g-hat) 89.4328 corr 0.831133 regr 1.30792
+ iter 30300 time to finish chain 5 hours 36 minutes 18 seconds 0.0556625 rounding var(g-hat) 89.4333 corr 0.831138 regr 1.30792
+ iter 30400 time to finish chain 5 hours 32 minutes 39 seconds 0.057935 rounding var(g-hat) 89.4316 corr 0.831134 regr 1.30793
+ iter 30500 time to finish chain 5 hours 29 minutes 1 seconds 0.0565367 rounding var(g-hat) 89.4312 corr 0.831133 regr 1.30793
+ iter 30600 time to finish chain 5 hours 25 minutes 23 seconds 0.0558806 rounding var(g-hat) 89.4306 corr 0.831131 regr 1.30793
+ iter 30700 time to finish chain 5 hours 21 minutes 45 seconds 0.0553835 rounding var(g-hat) 89.4295 corr 0.831126 regr 1.30793
+ iter 30800 time to finish chain 5 hours 18 minutes 5 seconds 0.0557769 rounding var(g-hat) 89.4328 corr 0.831135 regr 1.30792
+ iter 30900 time to finish chain 5 hours 14 minutes 32 seconds 0.0576461 rounding var(g-hat) 89.4323 corr 0.831135 regr 1.30792
+ iter 31000 time to finish chain 5 hours 10 minutes 58 seconds 0.0562436 rounding var(g-hat) 89.43 corr 0.831127 regr 1.30793
+ iter 31100 time to finish chain 5 hours 7 minutes 22 seconds 0.0560718 rounding var(g-hat) 89.4277 corr 0.831121 regr 1.30793
+ iter 31200 time to finish chain 5 hours 3 minutes 47 seconds 0.0556622 rounding var(g-hat) 89.4311 corr 0.831129 regr 1.30792
+ iter 31300 time to finish chain 5 hours 13 seconds 0.0563906 rounding var(g-hat) 89.4308 corr 0.831132 regr 1.30793
+ iter 31400 time to finish chain 4 hours 56 minutes 37 seconds 0.0561777 rounding var(g-hat) 89.4297 corr 0.831131 regr 1.30793
+ iter 31500 time to finish chain 4 hours 53 minutes 2 seconds 0.0565606 rounding var(g-hat) 89.4308 corr 0.831134 regr 1.30793
+ iter 31600 time to finish chain 4 hours 49 minutes 28 seconds 0.0565014 rounding var(g-hat) 89.4312 corr 0.831135 regr 1.30793
+ iter 31700 time to finish chain 4 hours 45 minutes 54 seconds 0.0559875 rounding var(g-hat) 89.4306 corr 0.831136 regr 1.30794
+ iter 31800 time to finish chain 4 hours 42 minutes 21 seconds 0.0553559 rounding var(g-hat) 89.4358 corr 0.831147 regr 1.30792
+ iter 31900 time to finish chain 4 hours 38 minutes 49 seconds 0.0558217 rounding var(g-hat) 89.4353 corr 0.831146 regr 1.30792
+ iter 32000 time to finish chain 4 hours 35 minutes 18 seconds 0.0568133 rounding var(g-hat) 89.4322 corr 0.83114 regr 1.30793
+ iter 32100 time to finish chain 4 hours 31 minutes 47 seconds 0.0559469 rounding var(g-hat) 89.4314 corr 0.831137 regr 1.30793
+ iter 32200 time to finish chain 4 hours 28 minutes 18 seconds 0.0558219 rounding var(g-hat) 89.431 corr 0.831135 regr 1.30793
+ iter 32300 time to finish chain 4 hours 24 minutes 48 seconds 0.0558929 rounding var(g-hat) 89.4317 corr 0.831138 regr 1.30793
+ iter 32400 time to finish chain 4 hours 21 minutes 19 seconds 0.0572651 rounding var(g-hat) 89.4324 corr 0.831139 regr 1.30793
+ iter 32500 time to finish chain 4 hours 17 minutes 50 seconds 0.0565698 rounding var(g-hat) 89.4319 corr 0.831136 regr 1.30793
+ iter 32600 time to finish chain 4 hours 14 minutes 21 seconds 0.0560239 rounding var(g-hat) 89.4326 corr 0.83114 regr 1.30793
+ iter 32700 time to finish chain 4 hours 10 minutes 53 seconds 0.0566971 rounding var(g-hat) 89.4325 corr 0.831141 regr 1.30793
+ iter 32800 time to finish chain 4 hours 7 minutes 28 seconds 0.0570456 rounding var(g-hat) 89.4286 corr 0.831132 regr 1.30795
+ iter 32900 time to finish chain 4 hours 4 minutes 4 seconds 0.0556875 rounding var(g-hat) 89.4314 corr 0.831143 regr 1.30794
+ iter 33000 time to finish chain 4 hours 40 seconds 0.0557608 rounding var(g-hat) 89.4333 corr 0.831148 regr 1.30794
+ iter 33100 time to finish chain 3 hours 57 minutes 17 seconds 0.0560849 rounding var(g-hat) 89.4328 corr 0.831148 regr 1.30794
+ iter 33200 time to finish chain 3 hours 53 minutes 55 seconds 0.0560786 rounding var(g-hat) 89.4314 corr 0.831146 regr 1.30795
+ iter 33300 time to finish chain 3 hours 50 minutes 33 seconds 0.0566388 rounding var(g-hat) 89.428 corr 0.831138 regr 1.30796
+ iter 33400 time to finish chain 3 hours 47 minutes 11 seconds 0.0560043 rounding var(g-hat) 89.4256 corr 0.831132 regr 1.30797
+ iter 33500 time to finish chain 3 hours 43 minutes 49 seconds 0.0569402 rounding var(g-hat) 89.4243 corr 0.831128 regr 1.30797
+ iter 33600 time to finish chain 3 hours 40 minutes 28 seconds 0.0560224 rounding var(g-hat) 89.4261 corr 0.831131 regr 1.30796
+ iter 33700 time to finish chain 3 hours 37 minutes 7 seconds 0.0571717 rounding var(g-hat) 89.4262 corr 0.831134 regr 1.30797
+ iter 33800 time to finish chain 3 hours 33 minutes 47 seconds 0.0567319 rounding var(g-hat) 89.4233 corr 0.831129 regr 1.30798
+ iter 33900 time to finish chain 3 hours 30 minutes 27 seconds 0.0572275 rounding var(g-hat) 89.4253 corr 0.831134 regr 1.30797
+ iter 34000 time to finish chain 3 hours 27 minutes 9 seconds 0.0566807 rounding var(g-hat) 89.4261 corr 0.831137 regr 1.30797
+ iter 34100 time to finish chain 3 hours 23 minutes 51 seconds 0.0567387 rounding var(g-hat) 89.426 corr 0.831137 regr 1.30797
+ iter 34200 time to finish chain 3 hours 20 minutes 34 seconds 0.056048 rounding var(g-hat) 89.4263 corr 0.831137 regr 1.30797
+ iter 34300 time to finish chain 3 hours 17 minutes 17 seconds 0.0565364 rounding var(g-hat) 89.4265 corr 0.831137 regr 1.30797
+ iter 34400 time to finish chain 3 hours 14 minutes 1 seconds 0.0569444 rounding var(g-hat) 89.4225 corr 0.831127 regr 1.30798
+ iter 34500 time to finish chain 3 hours 10 minutes 46 seconds 0.0565733 rounding var(g-hat) 89.4233 corr 0.831129 regr 1.30798
+ iter 34600 time to finish chain 3 hours 7 minutes 33 seconds 0.0567063 rounding var(g-hat) 89.4222 corr 0.831126 regr 1.30798
+ iter 34700 time to finish chain 3 hours 4 minutes 20 seconds 0.0566107 rounding var(g-hat) 89.4232 corr 0.831128 regr 1.30798
+ iter 34800 time to finish chain 3 hours 1 minutes 6 seconds 0.0557013 rounding var(g-hat) 89.4222 corr 0.831125 regr 1.30798
+ iter 34900 time to finish chain 2 hours 57 minutes 53 seconds 0.0575314 rounding var(g-hat) 89.4225 corr 0.831124 regr 1.30798
+ iter 35000 time to finish chain 2 hours 54 minutes 40 seconds 0.0575541 rounding var(g-hat) 89.4228 corr 0.831128 regr 1.30798
+ iter 35100 time to finish chain 2 hours 51 minutes 27 seconds 0.056388 rounding var(g-hat) 89.4231 corr 0.831129 regr 1.30798
+ iter 35200 time to finish chain 2 hours 48 minutes 15 seconds 0.0566698 rounding var(g-hat) 89.4238 corr 0.831127 regr 1.30797
+ iter 35300 time to finish chain 2 hours 45 minutes 4 seconds 0.0561678 rounding var(g-hat) 89.4258 corr 0.831134 regr 1.30797
+ iter 35400 time to finish chain 2 hours 41 minutes 53 seconds 0.0556401 rounding var(g-hat) 89.4283 corr 0.831139 regr 1.30796
+ iter 35500 time to finish chain 2 hours 38 minutes 44 seconds 0.0555091 rounding var(g-hat) 89.4282 corr 0.83114 regr 1.30796
+ iter 35600 time to finish chain 2 hours 35 minutes 35 seconds 0.0558133 rounding var(g-hat) 89.428 corr 0.831139 regr 1.30796
+ iter 35700 time to finish chain 2 hours 32 minutes 26 seconds 0.0553079 rounding var(g-hat) 89.43 corr 0.831145 regr 1.30795
+ iter 35800 time to finish chain 2 hours 29 minutes 19 seconds 0.0564066 rounding var(g-hat) 89.43 corr 0.831143 regr 1.30795
+ iter 35900 time to finish chain 2 hours 26 minutes 12 seconds 0.0561249 rounding var(g-hat) 89.4306 corr 0.831143 regr 1.30795
+ iter 36000 time to finish chain 2 hours 23 minutes 6 seconds 0.0564052 rounding var(g-hat) 89.4303 corr 0.83114 regr 1.30794
+ iter 36100 time to finish chain 2 hours 20 minutes 0 seconds 0.0564605 rounding var(g-hat) 89.4293 corr 0.831137 regr 1.30795
+ iter 36200 time to finish chain 2 hours 16 minutes 55 seconds 0.056398 rounding var(g-hat) 89.4286 corr 0.831136 regr 1.30795
+ iter 36300 time to finish chain 2 hours 13 minutes 51 seconds 0.0553245 rounding var(g-hat) 89.4299 corr 0.831138 regr 1.30794
+ iter 36400 time to finish chain 2 hours 10 minutes 47 seconds 0.0555608 rounding var(g-hat) 89.4288 corr 0.831134 regr 1.30795
+ iter 36500 time to finish chain 2 hours 7 minutes 44 seconds 0.0565586 rounding var(g-hat) 89.4294 corr 0.831136 regr 1.30795
+ iter 36600 time to finish chain 2 hours 4 minutes 41 seconds 0.0563827 rounding var(g-hat) 89.4298 corr 0.831134 regr 1.30794
+ iter 36700 time to finish chain 2 hours 1 minutes 40 seconds 0.056476 rounding var(g-hat) 89.4307 corr 0.831137 regr 1.30794
+ iter 36800 time to finish chain 1 hours 58 minutes 38 seconds 0.056938 rounding var(g-hat) 89.4316 corr 0.83114 regr 1.30794
+ iter 36900 time to finish chain 1 hours 55 minutes 38 seconds 0.0567355 rounding var(g-hat) 89.4339 corr 0.831144 regr 1.30792
+ iter 37000 time to finish chain 1 hours 52 minutes 38 seconds 0.0572219 rounding var(g-hat) 89.4316 corr 0.831137 regr 1.30793
+ iter 37100 time to finish chain 1 hours 49 minutes 38 seconds 0.0564917 rounding var(g-hat) 89.4296 corr 0.83113 regr 1.30793
+ iter 37200 time to finish chain 1 hours 46 minutes 39 seconds 0.0569455 rounding var(g-hat) 89.4297 corr 0.831131 regr 1.30794
+ iter 37300 time to finish chain 1 hours 43 minutes 41 seconds 0.0561018 rounding var(g-hat) 89.4293 corr 0.831132 regr 1.30794
+ iter 37400 time to finish chain 1 hours 40 minutes 43 seconds 0.0555399 rounding var(g-hat) 89.4302 corr 0.831133 regr 1.30794
+ iter 37500 time to finish chain 1 hours 37 minutes 46 seconds 0.0554339 rounding var(g-hat) 89.4305 corr 0.831133 regr 1.30793
+ iter 37600 time to finish chain 1 hours 34 minutes 49 seconds 0.0561179 rounding var(g-hat) 89.4315 corr 0.831137 regr 1.30793
+ iter 37700 time to finish chain 1 hours 31 minutes 53 seconds 0.0566148 rounding var(g-hat) 89.4321 corr 0.83114 regr 1.30793
+ iter 37800 time to finish chain 1 hours 28 minutes 57 seconds 0.0558784 rounding var(g-hat) 89.4323 corr 0.831138 regr 1.30793
+ iter 37900 time to finish chain 1 hours 26 minutes 3 seconds 0.0566111 rounding var(g-hat) 89.4319 corr 0.831137 regr 1.30793
+ iter 38000 time to finish chain 1 hours 23 minutes 8 seconds 0.055752 rounding var(g-hat) 89.433 corr 0.831138 regr 1.30792
+ iter 38100 time to finish chain 1 hours 20 minutes 15 seconds 0.0568632 rounding var(g-hat) 89.4323 corr 0.831137 regr 1.30792
+ iter 38200 time to finish chain 1 hours 17 minutes 22 seconds 0.0561204 rounding var(g-hat) 89.4318 corr 0.831133 regr 1.30792
+ iter 38300 time to finish chain 1 hours 14 minutes 29 seconds 0.0561172 rounding var(g-hat) 89.4308 corr 0.831132 regr 1.30793
+ iter 38400 time to finish chain 1 hours 11 minutes 37 seconds 0.0565466 rounding var(g-hat) 89.4305 corr 0.831131 regr 1.30793
+ iter 38500 time to finish chain 1 hours 8 minutes 45 seconds 0.0568969 rounding var(g-hat) 89.4321 corr 0.831137 regr 1.30793
+ iter 38600 time to finish chain 1 hours 5 minutes 54 seconds 0.0548072 rounding var(g-hat) 89.4337 corr 0.831141 regr 1.30792
+ iter 38700 time to finish chain 1 hours 3 minutes 4 seconds 0.0562157 rounding var(g-hat) 89.4307 corr 0.831134 regr 1.30793
+ iter 38800 time to finish chain 1 hours 14 seconds 0.0562668 rounding var(g-hat) 89.431 corr 0.831133 regr 1.30793
+ iter 38900 time to finish chain 57 minutes 25 seconds 0.0555796 rounding var(g-hat) 89.4329 corr 0.831137 regr 1.30792
+ iter 39000 time to finish chain 54 minutes 36 seconds 0.054987 rounding var(g-hat) 89.4339 corr 0.831141 regr 1.30792
+ iter 39100 time to finish chain 51 minutes 47 seconds 0.0551272 rounding var(g-hat) 89.4331 corr 0.831139 regr 1.30792
+ iter 39200 time to finish chain 48 minutes 59 seconds 0.0557747 rounding var(g-hat) 89.4309 corr 0.831134 regr 1.30793
+ iter 39300 time to finish chain 46 minutes 12 seconds 0.0568744 rounding var(g-hat) 89.4298 corr 0.831131 regr 1.30794
+ iter 39400 time to finish chain 43 minutes 25 seconds 0.0564953 rounding var(g-hat) 89.4299 corr 0.831131 regr 1.30793
+ iter 39500 time to finish chain 40 minutes 38 seconds 0.0560606 rounding var(g-hat) 89.4325 corr 0.831138 regr 1.30793
+ iter 39600 time to finish chain 37 minutes 53 seconds 0.0563998 rounding var(g-hat) 89.4322 corr 0.831136 regr 1.30793
+ iter 39700 time to finish chain 35 minutes 7 seconds 0.0573203 rounding var(g-hat) 89.4316 corr 0.831134 regr 1.30793
+ iter 39800 time to finish chain 32 minutes 22 seconds 0.0573928 rounding var(g-hat) 89.4322 corr 0.831136 regr 1.30792
+ iter 39900 time to finish chain 29 minutes 37 seconds 0.0563363 rounding var(g-hat) 89.4297 corr 0.831129 regr 1.30793
+ iter 40000 time to finish chain 26 minutes 53 seconds 0.0568651 rounding var(g-hat) 89.4276 corr 0.831125 regr 1.30794
+ iter 40100 time to finish chain 24 minutes 9 seconds 0.0569196 rounding var(g-hat) 89.4276 corr 0.831123 regr 1.30794
+ iter 40200 time to finish chain 21 minutes 26 seconds 0.0561639 rounding var(g-hat) 89.4286 corr 0.831127 regr 1.30794
+ iter 40300 time to finish chain 18 minutes 43 seconds 0.0572083 rounding var(g-hat) 89.4297 corr 0.831129 regr 1.30793
+ iter 40400 time to finish chain 16 minutes 1 seconds 0.0564038 rounding var(g-hat) 89.4289 corr 0.831127 regr 1.30794
+ iter 40500 time to finish chain 13 minutes 19 seconds 0.0572959 rounding var(g-hat) 89.428 corr 0.831126 regr 1.30794
+ iter 40600 time to finish chain 10 minutes 38 seconds 0.0563538 rounding var(g-hat) 89.4292 corr 0.83113 regr 1.30794
+ iter 40700 time to finish chain 7 minutes 57 seconds 0.0568835 rounding var(g-hat) 89.4285 corr 0.831127 regr 1.30794
+ iter 40800 time to finish chain 5 minutes 17 seconds 0.0562847 rounding var(g-hat) 89.4286 corr 0.831128 regr 1.30794
+ iter 40900 time to finish chain 2 minutes 37 seconds 0.0559058 rounding var(g-hat) 89.43 corr 0.83113 regr 1.30793
+ Outputting the results of the analysis
+ Job finished 

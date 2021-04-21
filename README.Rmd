@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+# QGERT
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+QGERT stands for **Qualitas Genetic Evaluation Routine Tools**. The goal of QGERT is to provide a set of standardized tools to prepare data and to post-process results of the routine genetic evaluation. The main focus of the post-processing is on quality assurance and on results checking. As a consequence of that, principles of reproducibility of all tasks are followed as closely as possible.
+
+The package website is available at: https://pvrqualitasag.github.io/qgert/
+
+
+## Installation
+
+Because the package is only useful in the context of the genetic evaluations done at [Qualitas AG](https://qualitasag.ch), the package will not be released to CRAN. The development version can be installed from [GitHub](https://github.com/) with:
+
+```{r installation, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("pvrqualitasag/qgert")
+```
+
+
+## Example
+
+Examples of basic use cases are shown in the different articles that are available from this site. A short description of all available articles is listed below.
+
+* [Getting Started](https://pvrqualitasag.github.io/qgert/articles/qgert_getting_started.html): Description of basic usage of the functionality provided by `qgert`.
+* [Comparison Plots](https://pvrqualitasag.github.io/qgert/articles/comparison_plots.html): Explanation of what a comparison plot is.
+* [Comparison Plot Report](https://pvrqualitasag.github.io/qgert/articles/comparison_plot_report.html): Combination of comparison plots in a single report. Reports can be generated from within R or with a wrapper bash-script.
+* [Spinning bash script](https://pvrqualitasag.github.io/qgert/articles/spin_bash_script.html): Conversion of specially annotated bash scripts into an HTML page.
+* [Split gsRuns According To Predicted Runtimes](https://pvrqualitasag.github.io/qgert/articles/split_gsruns_sorted_rt.html): A list of computing jobs is split into smaller computation batches according to estimated runtimes from a previous evaluation.
+
+
+## Latest Change
+```{r, echo=FALSE}
+cat(format(Sys.time(), "%a %b %d %X %Y %Z"), ' -- ', Sys.getenv("USER"), '\n')
+```
+

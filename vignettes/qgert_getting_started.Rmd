@@ -1,0 +1,56 @@
+---
+title: "Getting Started With QGERT"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started With QGERT}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, eval=FALSE}
+library(qgert)
+```
+
+
+## Abstract
+The package `qgert` provides a set of tools that are useful for genetic evaluation routine tasks. The tools are provided as bash scripts or as R-functions. 
+
+
+## Installation
+The package can be installed from github with 
+
+```{r installation, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("pvrqualitasag/qgert")
+```
+
+
+## Features
+The following features are available in package `qgert`
+
+1. Comparison Plot Reports: For each trait group comparison plots can be summarized into a report. Please have a look at the specific article on [comparison plot reports](https://pvrqualitasag.github.io/qgert/articles/comparison_plot_report.html).
+2. Create New Bash Script: new bash scripts can be created using the command: `<path-to-rlib>/qgert/bash/new_bash_script.sh -t <path-to-rlib>/qgert/templates/bash/bash_script_so.template` where on the ZWS-servers the value for `<path-to-rlib>` corresponds to `/home/zws/lib/R/library`.
+3. Convert Bash Scripts To HTML: Specially formatted bash scripts can be converted into a static HTML-page. For more details, please have a look at the article on [Spinning Bash Scripts](https://pvrqualitasag.github.io/qgert/articles/spin_bash_script.html).
+
+Problems and Bugs should be reported at https://github.com/pvrqualitasag/qgert/issues.
+
+
+## Session Info
+```{r}
+sessioninfo::session_info()
+```
+
+
+## Latest Update
+```{r}
+Sys.time()
+```
+
+

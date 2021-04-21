@@ -1,0 +1,40 @@
+---
+title: "Scheduling Strategy For GS-Jobs"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Scheduling Strategy For GS-Jobs}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, eval=FALSE, include=FALSE}
+library(qgert)
+```
+
+
+# Disclaimer
+This vignette serves as a reminder about a possible scheduling strategy for the computing jobs that are needed for the marker effect estimation.
+
+
+# Current Situation
+Currently all the computing runs are listed in a single file called gsRuns.txt. Then the list of runs is sorted according to the estimated run time from the previous evaluation and the list is split into smaller batches of runs. These batches are defined an stored in files that are named gsSortedRuns.txt.{i} where i is a number between 1 and N and N can be specified as an input to the script that does the sorting and the split. The batches of runs are then run in parallel using trivial parallelization. This parallelization is implemented using different screens on the same machine.
+
+
+# Problems
+
+
+# Alternative Strategy
+An alternative is to omit the creation of the batches of runs files. The runs in gsRuns.txt are sorted according to the estimated run time from the previous evaluation and are written to one file gsSortedRuns.txt. Then we use a larger number of screens for the parallelisation. The number of screens should be about equal to the number of cores that a server has. Within each screen we do a loop over the lines of gsSortedRuns.txt and start the individual runs one after each other. After starting a given run, we write a file to a subdirectory called `started` which notifies this run to be started. Before starting a different new run, we first check, whether it has not already been started.
+
+
+
+```{r last-update, echo=FALSE, results='asis'}
+cat(rmdhelp::get_latest_change())
+```

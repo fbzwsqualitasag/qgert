@@ -1,0 +1,48 @@
+---
+title: "Toplists of Bulls for BVCH"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Toplists of Bulls for BVCH}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(qgert)
+```
+
+
+## Disclaimer
+The features to create toplists of bulls for BVCH are described here. Originally these features were included in a RStudio-project called 'toplistbvch'. 
+
+
+## Terminology
+Toplists of bulls are rankings of bulls according to the predicted breeding values in different traits. The lists are exported from the database and are entered into an excel spreadsheet. The ranking of the bulls for a certain trait is entered in a different workbook. The ranking lists for the two subgroups 'BV' and 'OB' are separated by a few empty lines in the same workbook. 
+
+
+## Input
+The input consists of the lists of predicted breeding values for all bulls. These lists come as csv-files and they are in two different files for 'BV' and 'OB'. 
+
+
+## Procedure
+The procedure to create the Toplists is done according to the following steps.
+
+1. Input consisting of a table of breeding values where columns contain basic information of bulls and predicted breeding values and each row corresponds to a different bull. This type of tabular input is read from csv-files which are exported from the database. For each sub-breed (BV and OB) a separate csv-file is exported. The input data is read into a list of tibbles.
+2. For every trait of interest a ranking is created and stored in the list of input data.
+3. The ranked data are written to different xlsx workbooks using the package `openxlsx`.
+
+
+## Creation of Toplists
+A shell script is used as a wrapper to locate the input data and to place the result in the correct directory.
+
+```
+./create_tl_bvch -c 2008
+```
+

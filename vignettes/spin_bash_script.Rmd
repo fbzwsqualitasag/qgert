@@ -1,0 +1,63 @@
+---
+title: "Spinning Bash Scripts"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Spinning Bash Scripts}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(qgert)
+```
+```{r odg-convert-hook, include=FALSE, eval=FALSE}
+knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
+```
+
+## Description
+The function `spin_sh()` is the analoguous function to `knitr::spin()` but for bash scripts. That means the function `spin_sh()` takes a specially formatted bash script and converts it into a literate programming document. Normal text that contains the documentation of the bash script should be written after the roxygen comment (`#'`) and code chunks should start with a code chunk option line which is written after `#+`. 
+
+The function `spin_sh()` separates the text from the code chunks and converts the bash script into a Rmarkdown (Rmd) document. When specified by the function parameter `pb_knit`, the Rmd is rendered into a static HTML page. In contrast to `knitr::spin()`, the bash code chunks must start with a chunk option line that starts with `#+`, otherwise code chunks are not recognized correctly. By default, the option `eval=FALSE` is set for every chunk, except the option is explicitly assigned with a given value.
+
+
+## Usage
+The only argument that must be specified for `spin_sh()` is the name of a bash script that contains the special formatting described in the previous section. 
+
+```{r, eval=FALSE}
+spin_sh(ps_sh_hair = system.file('bash', 'spin_script.sh', package = 'qgert'))
+```
+
+The above function call takes the bash-script `spin_script.sh` converts it into a Rmarkdown file with the name `spin_script.Rmd` and then renders the Rmd source to a static HTML page stored in `spin_script.html`. The name of the output file can be specified with the argument `ps_out_rmd`. Options `pb_knit` and `ps_out_rmd` determine whether the Rmd source should be rendered to an HTML page and whether the Rmd source file should be kept or not.
+
+
+## Value
+The result of calling `spin_sh()` as shown above is a static HTML page which shows documentation and code chunks together formatted in a way that users of the `rmarkdown` and the `knitr` packages are familiar with. A screenshot of the output file is shown below.
+
+```{r spin-sh-html-ouput, echo=FALSE, hook_convert_odg=TRUE, fig_path="odg"}
+#rmdhelp::use_odg_graphic(ps_path = "odg/spin-sh-html-ouput.odg")
+knitr::include_graphics(path = "odg/spin-sh-html-ouput.png")
+```
+
+ 
+## Note
+The original function `knitr::spin()` has many options and features which are not ported to `spin_sh()`. As an example, `spin_sh()` provides only two output format options (html and pdf) which can be determined with the additional parameter `pobj_output_format` which is directly passed to `rmarkdown::render()`. The functionality of `spin_sh()` can also be used from the bash script called `spin_script.sh` which is used in the test output above. The options required by `spin_sh()` are taken from commandline options where 
+
+* `-s <input_file>` specifies the bash input file
+* `-o <output_file>` specifies the name of the output file
+* `-f <output_format>` specifies the output format. 
+
+Only the first options must be specified.
+
+
+## SessionInfo
+```{r}
+sessioninfo::session_info()
+```
+

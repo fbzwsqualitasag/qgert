@@ -1,0 +1,44 @@
+---
+title: "Compare Plots"
+author: "`r Sys.getenv('USER')`"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Disclaimer
+Plots from two different GE-runs are compared by putting them side by side. Plots from previous GE runs are extracted from the specified archive location. The zipped plot files from the archive are extracted using the funcition `R.utils::gunzip()` which works similarly to the shell version of `gunzip`.
+
+
+
+## Comparison Of Plots
+Plots on the left are from previous evaluation and on the right from current evaluation. 
+
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = './curgel/prev_comp/diff_estimate_ggd_P_P.pdf')
+knitr::include_graphics(path = './curgel/diff_estimate_ggd_P_P.pdf')
+```
+
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = './curgel/prev_comp/diff_estimate_lgd_P_P.pdf')
+knitr::include_graphics(path = './curgel/diff_estimate_lgd_P_P.pdf')
+```
+
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = './curgel/prev_comp/diff_estimate_ngd_P_P.pdf')
+knitr::include_graphics(path = './curgel/diff_estimate_ngd_P_P.pdf')
+```
+
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = './curgel/prev_comp/diff_estimate_tdd_P_P.pdf')
+knitr::include_graphics(path = './curgel/diff_estimate_tdd_P_P.pdf')
+```
+

@@ -1,0 +1,56 @@
+---
+title: "Compile The List Of EBV Files"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Compile The List Of EBV Files}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, eval=FALSE, include=FALSE}
+library(qgert)
+```
+
+# Disclaimer
+This is just a reminder and a placeholder for a project that needs to get implemented but for which there is currently no time. 
+
+
+# Background
+The marker effect estimation and the prediction of dgzw/gozw both use traditional ebvs (P or ITB) as input. The paths to these ebv files are stored in input files. Because the number of input paths in these files is quite large, a manual compilation of these lists takes a lot of time. As a consequence of that the compilation process should be done automatically.
+
+
+# Input
+Marker effect estimation and prediction have different inputs. These inputs are shown in the following table.
+
+```{r input-table, echo=FALSE}
+tbl_input <- tibble::tibble(Evaluation = c('marker effect estimation', 'marker effect estimation', 'prediction', 'prediction'),
+                            `EBV Type` = c('P', 'ITB', 'P', 'ITB'),
+                            Input      = c('ebvFiles_P.csv', 'ebvFiles_ITB.csv', 'ebvFiles.csv', 'ebvFiles.csv'))
+knitr::kable(tbl_input)
+```
+
+From the above table one could suggest to just combine the two input files from the marker effect estimation to the single input file of the prediction. The problem with this is that in the set of breeds that are considered is different in both processes. As an example, in the prediction breeds such as `rh`, `sf` and `si` are treated as separate breeds. Those are together all as `rh` in the marker estimation.
+
+
+# Implementation Ideas
+Two possible ideas on how to implement the automated compilation of ebvFiles.csv can be thought of
+
+1. Direct creation: Whenever the ebv results files are produced, their path is written to a common file or location. The problem with this approach is that this requires many changes in different places.
+2. Template-based implementation: use a template with all constant information and insert the variable parts with placeholder-replacement mechanism.
+
+
+## Template
+Create a file `ebvFiles.csv.template` which contains all the constant paths to ebv result files. The variable parts consisting of the paths to ebv-files that change with every routine, are represented with placeholders. These placeholders are then replaced by the actual values.
+
+
+```{r last-update, echo=FALSE, results='asis'}
+cat(rmdhelp::get_latest_change())
+```
+

@@ -1,0 +1,34 @@
+---
+title: "Alternative Creation Of Compare Plots"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Alternative Creation Of Compare Plots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, eval=FALSE, include=FALSE}
+library(qgert)
+```
+
+
+# Disclaimer
+This vignette discusses possible alternatives to the current creation of comparison plots. 
+
+
+# Background
+The spring evaluation is used to introduce changes in the routine evaluation process. Before changes are set effective, potential consequences have to be tested. Tests are done in separate evaluation runs which produce results in non-standard places. This means that results which are used for the comparisons cannot be found in the archive.
+
+
+# Alternative
+The aim of this discussion is to evaluate what are the possibilities of having some low level scripts or functions to generate comparison plots where results of current and previous evaluations are not in standard places. This could equally be intersting for testing purposes or for the evaluation routines after the tests.
+
+
+# Existing Tools

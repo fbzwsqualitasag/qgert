@@ -1,0 +1,59 @@
+---
+title: "Split gsRuns According To Predicted Runtimes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Split gsRuns According To Predicted Runtimes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(qgert)
+```
+
+## Usage
+The split of the gsRuns can be done using the following shell script
+
+```{bash, eval=FALSE}
+cd /qualstorzws01/data_zws/gs
+./prog/split_gsRuns_sorted_rt.sh -g work/gsRuns.txt -d 1908 -m first -n 100
+```
+
+This uses the gsRuns-list stored under `work/gsRuns.txt`, it takes the runtime information from the logfiles of the archive of the 1908 evaluation and it produces 100 small job files.
+
+
+## Update and Installation
+This script can only be used if the R-package `qgert` is installed. On the ZWS-servers this is the case. An update of the package can be done with
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("pvrqualitasag/qgert")
+```
+
+Then the bash script `split_gsRuns_sorted_rt.sh` must be installed into the subdirectory `prog` of the GS-evaluation directory
+
+```{bash, eval=FALSE}
+/home/zws/lib/R/library/qgert/bash/install_script.sh -s ~/lib/R/library/qgert/bash/split_gsRuns_sorted_rt.sh -t /qualstorzws01/data_zws/gs/prog
+```
+
+
+
+## Purpose - Why This Is Done
+Estimation of marker effects and reliability prediction is a resource intensive step during the routine genetic evaluation. Hence all these estimation tasks must be parallelized. Given a list (gsRuns-list) of computation jobs which consist of combinations of breeds, evaluation type, trait and parameter type, this list is to be split into a number of smaller lists. 
+
+As an additional requirement, the produced number of lists should contain the jobs sorted according to their predicted running time from a previous evaluation.
+
+
+## Description - How This Is Done
+Given a directory where the logfiles of the previous evaluation is archived (or just a simple run-label such as 1908), the logfiles are searched for the predicted running time of the respective estimation job. This information is written to an outputfile. The outputfile is read into R where the records are sorted according to their running times. After the sort, a specified number of job-files is written. These files have the name-prefix `gsSortedRuns.txt` followed by a number. 
+
+To prepare the binary version of the SNP-Data one gsRun-job per breed is written to the file `gsRuns.txt.snpBin`. The jobs that are contained in `gsRuns.txt.snpBin` are not contained in the `gsSortedRuns.txt`-files. Hence all the programs with partitioned gs-Runs-lists, `gsRuns.txt.snpBin` must also be used as an argument.
+
+
