@@ -1,0 +1,15 @@
+pandoc: 2.11.4
+pkgdown: 1.5.1
+pkgdown_sha: ~
+articles:
+  alternative_compare_plot: alternative_compare_plot.html
+  comparison_plot_report: comparison_plot_report.html
+  comparison_plots: comparison_plots.html
+  compile_list_ebvfiles: compile_list_ebvfiles.html
+  create_toplist_bull_bvch: create_toplist_bull_bvch.html
+  gs_job_schedule: gs_job_schedule.html
+  qgert_getting_started: qgert_getting_started.html
+  spin_bash_script: spin_bash_script.html
+  split_gsruns_sorted_rt: split_gsruns_sorted_rt.html
+last_built: 2021-04-26T15:35Z
+
