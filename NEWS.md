@@ -1,10 +1,10 @@
+# qgert 0.6.0
+
+* Division of caracass evaluation into BK, BT and NB
+
 # qgert 0.5.0
 
-# qgert 0.4.0
-
-# qgert 0.3.0
-
-# qgert 0.2.0
+* Migration to fbzwsqualitasag
 
 # qgert 0.4.0
 
