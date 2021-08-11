@@ -49,7 +49,7 @@ SERVER=`hostname`                          # put hostname of server in variable 
 #' ### Trait
 #' The trait abbreviation used in this comparison plot report
 #+ trait-abbrev
-TRAIT=carcass
+TRAIT=carcass_smt
 
 #' ## Functions
 #' The following definitions of general purpose functions are local to this script.
@@ -63,8 +63,6 @@ usage () {
   $ECHO "Usage: $SCRIPT -c <current_evaluation_label> -p <previous_evaluation_label>"
   $ECHO "  where -c <current_evaluation_label>  --  label of current evaluation, given by %YY%mm of publication date"
   $ECHO "        -p <previous_evaluation_label>  -- label of previous evaluation"
-  $ECHO "        -u                              -- optional argument to force update of R-package"
-  $ECHO "        -b <specific_breed>             -- specify a single breed, can eiter be {bv, je, rh}"
   $ECHO ""
   exit 1
 }
@@ -114,8 +112,7 @@ start_msg
 #+ getopts-parsing, eval=FALSE
 CURGE=""
 PREVGE=""
-PACKAGEUPDATE=""
-while getopts ":c:p:uh" FLAG; do
+while getopts ":c:p:h" FLAG; do
   case $FLAG in
     h) # produce usage message
       usage "Help message for $SCRIPT"
@@ -125,9 +122,6 @@ while getopts ":c:p:uh" FLAG; do
       ;;
     p) # specify label of previous GE
       PREVGE=$OPTARG
-      ;;
-    u) # specify whether update of package zwsroutine is needed
-      PACKAGEUPDATE=TRUE
       ;;
     :)
       usage "-$OPTARG requires an argument"
@@ -170,22 +164,6 @@ log_msg $SCRIPT "PAR_DIR=$PAR_DIR"
 #+ cd-eval-dir
 cd $EVAL_DIR
 
-#' ### R-Package Check
-#' Before running the report creation, we check whether the required R-packages are installed
-#+ r-package-check
-Rscript -e 'vec_req_cran_pkg <- c("devtools", "R.utils", "fs");vec_pkgidx_to_install <- (!is.element(vec_req_cran_pkg, installed.packages()));install.packages(vec_req_cran_pkg[vec_pkgidx_to_install], lib = "/home/zws/lib/R/library", repos="https://cran.rstudio.com")'
-
-#' ### Update
-#' In case package update was specified, then update, otherwise only if package is not available
-#+ update-qgert
-if [ "$PACKAGEUPDATE" == "TRUE" ]
-then
-  # update anyway
-  Rscript -e 'devtools::install_github("pvrqualitasag/qgert", lib = "/home/zws/lib/R/library")'
-else
-  # check whether qgert are installed
-  Rscript -e 'if (!is.element("qgert", installed.packages())) devtools::install_github("pvrqualitasag/qgert", lib = "/home/zws/lib/R/library")'
-fi
 
 #' ## Report Creation
 #' The report for the specified trait is created.
