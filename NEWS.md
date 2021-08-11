@@ -1,3 +1,5 @@
+# qgert 0.2.0
+
 # qgert 0.4.0
 
 * Added compare plot for TEM for BVCH
