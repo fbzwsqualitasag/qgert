@@ -1,3 +1,9 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+.Rhistory
+.gitignore
+inst/.DS_Store
+inst/templates/.DS_Store
+.Rproj.user
+.git

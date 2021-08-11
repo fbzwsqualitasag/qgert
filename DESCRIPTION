@@ -7,6 +7,8 @@ Authors@R:
            family = "von Rohr",
            role = c("aut", "cre"),
            email = "peter.vonrohr@qualitasag.ch")
+Author: Peter von Rohr  [aut, cre]
+Maintainer: Peter von Rohr <peter.vonrohr@qualitasag.ch>           
 Description: Results of routine genetic evaluations are post-processed to generate different reports
     for quality assurance. The validity of the results of a given analysis is assessed by a comparison 
     to the results of a previous analysis. This package provides a number of tools for such comparisons.
