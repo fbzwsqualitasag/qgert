@@ -15,4 +15,18 @@ URL: https://fbzwsqualitasag.github.io/qgert/
 BugReports: https://github.com/fbzwsqualitasag/qgert/issues
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 2.1.0)
+VignetteBuilder: knitr
 RoxygenNote: 7.1.0
+Imports: 
+    dplyr,
+    readr,
+    sessioninfo,
+    ggplot2,
+    R.utils,
+    fs,
+    glue,
+    log4r
