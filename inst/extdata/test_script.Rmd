@@ -154,7 +154,7 @@ end_msg
 
 
 ## Latest Update 
-```{bash, latest-update, eval=TRUE} 
+```{bash, latest-update, echo = FALSE, eval=TRUE} 
 date 
 ``` 
  
