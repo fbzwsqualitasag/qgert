@@ -103,9 +103,9 @@ update_pkg_local_host () {
   local l_REFERENCE=$1
     if [ "$l_REFERENCE" != "" ]
     then
-      singularity exec instance://$SIMGINSTANCENAME R -e "remotes::install_github('pvrqualitasag/qgert', ref = '${l_REFERENCE}', dependencies = FALSE, upgrade = 'never')"
+      singularity exec instance://$SIMGINSTANCENAME R -e "remotes::install_github('fbzwsqualitasag/qgert', ref = '${l_REFERENCE}', dependencies = FALSE, upgrade = 'never')"
     else
-      singularity exec instance://$SIMGINSTANCENAME R -e "remotes::install_github('pvrqualitasag/qgert', dependencies = FALSE, upgrade = 'never')"
+      singularity exec instance://$SIMGINSTANCENAME R -e "remotes::install_github('fbzwsqualitasag/qgert', dependencies = FALSE, upgrade = 'never')"
     fi
 }
 
@@ -116,9 +116,9 @@ update_pkg_local_simg () {
   local l_REFERENCE=$1
     if [ "$l_REFERENCE" != "" ]
     then
-      R -e "remotes::install_github('pvrqualitasag/qgert', ref = '${l_REFERENCE}', dependencies = FALSE, upgrade = 'never')"
+      R -e "remotes::install_github('fbzwsqualitasag/qgert', ref = '${l_REFERENCE}', dependencies = FALSE, upgrade = 'never')"
     else
-      R -e "remotes::install_github('pvrqualitasag/qgert', dependencies = FALSE, upgrade = 'never')"
+      R -e "remotes::install_github('fbzwsqualitasag/qgert', dependencies = FALSE, upgrade = 'never')"
     fi
 }
 
@@ -141,9 +141,9 @@ update_pkg () {
   else
     if [ "$REFERENCE" != "" ]
     then
-      SIMG_CMD="singularity exec instance://$SIMGINSTANCENAME R -e 'remotes::install_github(\"pvrqualitasag/qgert\", ref = \"${REFERENCE}\", dependencies = FALSE, upgrade = \"never\")'"
+      SIMG_CMD="singularity exec instance://$SIMGINSTANCENAME R -e 'remotes::install_github(\"fbzwsqualitasag/qgert\", ref = \"${REFERENCE}\", dependencies = FALSE, upgrade = \"never\")'"
     else
-      SIMG_CMD="singularity exec instance://$SIMGINSTANCENAME R -e 'remotes::install_github(\"pvrqualitasag/qgert\", dependencies = FALSE, upgrade = \"never\")'"
+      SIMG_CMD="singularity exec instance://$SIMGINSTANCENAME R -e 'remotes::install_github(\"fbzwsqualitasag/qgert\", dependencies = FALSE, upgrade = \"never\")'"
     fi
     log_msg 'update_pkg' " ** Running command: $SIMG_CMD ..."
     ssh ${USERNAME}@$l_SERVER "$SIMG_CMD"
