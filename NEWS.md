@@ -1,3 +1,5 @@
+# qgert 0.7.0
+
 # qgert 0.6.0
 
 * Division of caracass evaluation into BK, BT and NB
