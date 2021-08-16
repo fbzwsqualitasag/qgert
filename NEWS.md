@@ -1,5 +1,7 @@
 # qgert 0.7.0
 
+* Refactor compare_plot_report_generic into a preparation part and a part which does the report
+
 # qgert 0.6.0
 
 * Division of caracass evaluation into BK, BT and NB

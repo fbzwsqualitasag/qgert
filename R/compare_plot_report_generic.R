@@ -6,7 +6,7 @@
 ###
 ### ########################################################## ###
 
-## -- Generic Comparison Plot Creator Function
+## --- Comparison Plot Report Creator Function For Genetic Evaluations --------
 
 #' @title Create Report With Plots From Two GE Periods
 #'
@@ -230,3 +230,61 @@ create_ge_plot_report <- function(ps_gedir,
   return(invisible(NULL))
 }
 
+
+## ---- Generic Form of Comparison Plot Report Generator -----------------------
+
+
+#' Create Generic Form of Comparison Plot Report
+#'
+#' @description
+#' Given two directories with analogous plots, a comparison plot report is
+#' created. The comparison plot report shows pairs of analogous plots side-by-side
+#' in the report. Analogous plots can be plots of the same quantities at
+#' different time points. Analogous plots are identified by the same name of
+#' the plot file. Plots in the directory ps_current_dir are shown on the right-hand
+#' side and plots from the directory ps_previous_dir are shown on the left-hand
+#' side.
+#'
+#' @details
+#' The report generator starts by retrieving all plot files from ps_current_dir
+#' and from ps_previous_dir. Then it determines the intersection between the
+#' file-names and the two difference sets. In loops over all the sets, the plots
+#' are integrated into the report.
+#'
+#' @param ps_current_dir directory of current plots
+#' @param ps_previous_dir directory of previous plots
+#' @param ps_tmpl_path
+#' @param ps_report_text
+#' @param ps_out_path
+#' @param pb_keep_src
+#' @param pb_session_info
+#' @param pb_debug
+#' @param plogger
+#'
+#'
+#' @examples
+#' @export create_comparison_plot_report
+create_comparison_plot_report <- function(ps_current_dir,
+                                          ps_previous_dir,
+                                          ps_tmpl_path,
+                                          ps_report_text  = NULL,
+                                          ps_out_path     = "comparison_plot_report.Rmd",
+                                          pb_keep_src     = FALSE,
+                                          pb_session_info = TRUE,
+                                          pb_debug        = FALSE,
+                                          plogger         = NULL){
+  # debug and logging
+  if (pb_debug) {
+    if (is.null(plogger)){
+      lgr <- get_qgert_logger(ps_logfile = 'create_comparison_plot_report.log', ps_level = 'INFO')
+    } else {
+      lgr <- plogger
+    }
+    qgert_log_info(plogger = lgr, ps_caller = 'create_comparison_plot_report', ps_msg = " * Starting create_comparison_plot_report ... ")
+  }
+
+
+
+  # return nothing
+  return(invisible(TRUE))
+}
