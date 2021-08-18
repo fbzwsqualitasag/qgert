@@ -320,6 +320,14 @@ create_comparison_plot_report <- function(ps_right_dir,
   s_out_dir <- dirname(ps_out_path)
   if (!dir.exists(s_out_dir)) dir.create(path = s_out_dir, recursive = TRUE)
 
+  # check file extension of ps_out_path
+  if (tolower(fs::path_ext(ps_out_path)) == "rmd"){
+    s_out_path <- ps_out_path
+  } else {
+    s_out_path <- paste0(ps_out_path, ".Rmd")
+  }
+
+
   # get replacement values to be inserted in template
   l_repl_value_default <- get_generic_comparison_plot_report_default_replacement_values()
   l_repl_value_default[["ps_current_plot_dir"]] <- ps_right_dir
@@ -393,12 +401,12 @@ create_comparison_plot_report <- function(ps_right_dir,
     s_report_result <- paste0(s_report_result, "\n\n```{r}\n sessioninfo::session_info()\n```\n\n", collapse = "")
   }
   # write result to file
-  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" * Writing result string to file: ", ps_out_path))
-  cat(s_report_result, "\n", file = ps_out_path)
+  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" * Writing result string to file: ", s_out_path))
+  cat(s_report_result, "\n", file = s_out_path)
 
   # render the report
-  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" * Rendering output from file: ", ps_out_path))
-  rmarkdown::render(input = ps_out_path)
+  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" * Rendering output from file: ", s_out_path))
+  rmarkdown::render(input = s_out_path)
 
 
   # return nothing
