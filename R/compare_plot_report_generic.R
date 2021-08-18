@@ -316,6 +316,10 @@ create_comparison_plot_report <- function(ps_right_dir,
     }
   }
 
+  # check whether directory of ps_out_path exists
+  s_out_dir <- dirname(ps_out_path)
+  if (!dir.exists(s_out_dir)) dir.create(path = s_out_dir, recursive = TRUE)
+
   # get replacement values to be inserted in template
   l_repl_value_default <- get_generic_comparison_plot_report_default_replacement_values()
   l_repl_value_default[["ps_current_plot_dir"]] <- ps_right_dir
