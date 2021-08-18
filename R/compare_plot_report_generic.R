@@ -251,28 +251,39 @@ create_ge_plot_report <- function(ps_gedir,
 #' file-names and the two difference sets. In loops over all the sets, the plots
 #' are integrated into the report.
 #'
-#' @param ps_current_dir directory of current plots
-#' @param ps_previous_dir directory of previous plots
-#' @param ps_tmpl_path
-#' @param ps_report_text
-#' @param ps_out_path
-#' @param pb_keep_src
-#' @param pb_session_info
-#' @param pb_debug
-#' @param plogger
+#' @param ps_right_dir directory of plots shown on the right-hand-side in the report
+#' @param ps_left_dir directory of plots shown on the left-hand-side in the report
+#' @param ps_tmpl_path path to Rmd template file
+#' @param ps_diagram_na_path path to diagram to be included to stand for missing diagram
+#' @param ps_report_text Report text
+#' @param pl_repl_value list of replacement values for placeholders
+#' @param ps_out_path Path to report putput file
+#' @param pb_keep_src flag to keep source files
+#' @param pb_session_info add session info to report
+#' @param pb_force overwrite existing report, if it exists
+#' @param pb_debug flag to add debugging info
+#' @param plogger log4r logger object
 #'
 #'
 #' @examples
+#' \dontrun{
+#' dir1 <- system.file("extdata", "curgel", package = "qgert")
+#' dir2 <- system.file("extdata", "prevpath", package = "qgert")
+#' create_comparison_plot_report(ps_right_dir = dir1, ps_left_dir = dir2)
+#' }
 #' @export create_comparison_plot_report
-create_comparison_plot_report <- function(ps_current_dir,
-                                          ps_previous_dir,
-                                          ps_tmpl_path,
-                                          ps_report_text  = NULL,
-                                          ps_out_path     = "comparison_plot_report.Rmd",
-                                          pb_keep_src     = FALSE,
-                                          pb_session_info = TRUE,
-                                          pb_debug        = FALSE,
-                                          plogger         = NULL){
+create_comparison_plot_report <- function(ps_right_dir,
+                                          ps_left_dir,
+                                          ps_tmpl_path       = system.file("templates", "generic_comparison_plot_report.Rmd.template", package = "qgert"),
+                                          ps_diagram_na_path = system.file("templates", "Diagram_NA.pdf", package = "qgert"),
+                                          ps_report_text     = NULL,
+                                          pl_repl_value      = NULL,
+                                          ps_out_path        = "generic_comparison_plot_report.Rmd",
+                                          pb_keep_src        = FALSE,
+                                          pb_session_info    = FALSE,
+                                          pb_force           = FALSE,
+                                          pb_debug           = FALSE,
+                                          plogger            = NULL){
   # debug and logging
   if (pb_debug) {
     if (is.null(plogger)){
@@ -283,8 +294,111 @@ create_comparison_plot_report <- function(ps_current_dir,
     qgert_log_info(plogger = lgr, ps_caller = 'create_comparison_plot_report', ps_msg = " * Starting create_comparison_plot_report ... ")
   }
 
+  # check whether ps_right_dir and ps_left_dir exist
+  if (!dir.exists(ps_right_dir)) stop(" *** ERROR create_comparison_plot_report(): CANNOT FIND ps_right_dir: ", ps_right_dir)
+  if (!dir.exists(ps_left_dir)) stop(" *** ERROR create_comparison_plot_report(): CANNOT FIND ps_left_dir: ", ps_left_dir)
+  # list of plot files from ps_right_dir
+  vec_plot_current <- list.files(path = ps_right_dir, pattern = "\\.png$|\\.pdf$")
+  vec_plot_previous <- list.files(path = ps_left_dir, pattern = "\\.png$|\\.pdf$")
+  if (pb_debug){
+    qgert_log_info(plogger = lgr, ps_caller = 'create_comparison_plot_report', ps_msg = "List of current plot files: ")
+    print(vec_plot_current)
+    qgert_log_info(plogger = lgr, ps_caller = 'create_comparison_plot_report', ps_msg = "List of previous plot files: ")
+    print(vec_plot_previous)
+  }
+
+  # check whether old report file exists
+  if (file.exists(ps_out_path)){
+    if (pb_force){
+      unlink(ps_out_path)
+    } else {
+      stop(" *** ERROR create_comparison_plot_report: Old report exists, specify pb_force to overwrite ...")
+    }
+  }
+
+  # get replacement values to be inserted in template
+  l_repl_value_default <- get_generic_comparison_plot_report_default_replacement_values()
+  l_repl_value_default[["ps_current_plot_dir"]] <- ps_right_dir
+  l_repl_value_default[["ps_previous_plot_dir"]] <- ps_left_dir
+  if (is.null(pl_repl_value)){
+    l_repl_value <- l_repl_value_default
+  } else {
+    l_repl_value <- pl_repl_value
+    l_repl_value <- merge_list_to_default(pl_base = l_repl_value, pl_default = l_repl_value_default)
+  }
+
+  # prepare report template
+  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0("Reading template from: ", ps_tmpl_path))
+  con_tmpl <- file(description = ps_tmpl_path)
+  vec_tmpl <- readLines(con = file(ps_tmpl_path))
+  close(con = con_tmpl)
+  s_tmpl <- paste0(vec_tmpl, collapse = "\n")
+  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0("Template text: ", s_tmpl))
+  s_report_result <- string_replace(ps_tmpl = s_tmpl, pl_repl_value = l_repl_value)
+  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0("Result text: ", s_report_result))
+
+  # add report text if there is any
+  if (!is.null(ps_report_text))
+    s_report_result <- paste0(s_report_result, "\n\n", ps_report_text, collapse = "")
+
+  # loop over plot files and add R-code chunks to result string
+  for (idx in seq_along(vec_plot_current)){
+    s_cur_plot_file <- vec_plot_current[idx]
+    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" Current plot file: ", s_cur_plot_file))
+    # path to current plot file
+    s_cur_plot_path <- file.path(ps_right_dir, s_cur_plot_file)
+    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" Current plot from: ", s_cur_plot_path))
+    if (!file.exists(s_cur_plot_path)) stop(" *** ERROR [create_comparison_plot_report]: CANNOT FIND current plot path: ", s_cur_plot_path)
+
+    # path to previous plot file
+    s_prev_plot_path <- file.path(ps_left_dir, s_cur_plot_file)
+    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" Previous plot from: ", s_prev_plot_path))
+    if (!file.exists(s_prev_plot_path)) s_prev_plot_path <- ps_diagram_na_path
+
+    # add code chunk to result string
+    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = " * Adding R-code chunks for including diagrams ...")
+    s_report_result <- paste0(s_report_result, "\n\n### ", s_cur_plot_file, "\n\n```{r, echo=FALSE, fig.show='hold', out.width='50%'}\n", collapse = "")
+    s_report_result <- paste0(s_report_result, "knitr::include_graphics(path = '", s_prev_plot_path, "')\n", collapse = "")
+    s_report_result <- paste0(s_report_result, "knitr::include_graphics(path = '", s_cur_plot_path, "')\n", collapse = "")
+    s_report_result <- paste0(s_report_result, "```\n\n", collapse = "")
+
+  }
+  # add plots which are in ps_left_dir, but not in ps_right_dir
+  vec_both_dir <- intersect(vec_plot_current, vec_plot_previous)
+  vec_previous_only <- setdiff(vec_plot_previous, vec_both_dir)
+  if (length(vec_previous_only) > 0L){
+    for (idx in seq_along(vec_previous_only)){
+      s_cur_plot_file <- vec_previous_only[idx]
+      s_cur_plot_path <- ps_diagram_na_path
+      s_prev_plot_path <- file.path(ps_left_dir, s_cur_plot_file)
+      if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" Previous plot from: ", s_prev_plot_path))
+      if (!file.exists(s_prev_plot_path)) stop(" *** ERROR [create_comparison_plot_report]: CANNOT FIND previous plot path: ", s_prev_plot_path)
+      # add code chunk to result string
+      if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = " * Adding R-code chunks for including diagrams ...")
+      s_report_result <- paste0(s_report_result, "\n\n### ", s_cur_plot_file, "\n\n```{r, echo=FALSE, fig.show='hold', out.width='50%'}\n", collapse = "")
+      s_report_result <- paste0(s_report_result, "knitr::include_graphics(path = '", s_prev_plot_path, "')\n", collapse = "")
+      s_report_result <- paste0(s_report_result, "knitr::include_graphics(path = '", s_cur_plot_path, "')\n", collapse = "")
+      s_report_result <- paste0(s_report_result, "```\n\n", collapse = "")
+    }
+  }
+  # add session info, if specified
+  if (pb_session_info){
+    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = " * Adding session info ...")
+
+    # finally include session info into the report
+    s_report_result <- paste0(s_report_result, "\n\n```{r}\n sessioninfo::session_info()\n```\n\n", collapse = "")
+  }
+  # write result to file
+  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" * Writing result string to file: ", ps_out_path))
+  cat(s_report_result, "\n", file = ps_out_path)
+
+  # render the report
+  if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" * Rendering output from file: ", ps_out_path))
+  rmarkdown::render(input = ps_out_path)
 
 
   # return nothing
   return(invisible(TRUE))
 }
+
+
