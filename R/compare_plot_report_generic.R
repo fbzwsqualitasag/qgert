@@ -327,7 +327,6 @@ create_comparison_plot_report <- function(ps_right_dir,
     s_out_path <- paste0(ps_out_path, ".Rmd")
   }
 
-
   # get replacement values to be inserted in template
   l_repl_value_default <- get_generic_comparison_plot_report_default_replacement_values()
   l_repl_value_default[["ps_current_plot_dir"]] <- ps_right_dir
