@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgert</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0</span>
       </span>
     </div>
 
@@ -67,6 +67,9 @@
     </li>
     <li>
       <a href="../articles/create_toplist_bull_bvch.html">Toplists of Bulls for BVCH</a>
+    </li>
+    <li>
+      <a href="../articles/generic_comparison_plot_report.html">Generic Comparison Plot Report</a>
     </li>
     <li>
       <a href="../articles/gs_job_schedule.html">Scheduling Strategy For GS-Jobs</a>
@@ -125,13 +128,23 @@
 <div id="terminology" class="section level2">
 <h2 class="hasAnchor">
 <a href="#terminology" class="anchor"></a>Terminology</h2>
-<p>A comparison plot report is a document that shows a series of comparison plots arranged in two columns from two subsequent routine evaluations. Please have a look at the separate article on <a href="https://pvrqualitasag.github.io/qgert/articles/comparison_plots.html">comparison plots</a> to find how these plots are defined an how they are produced.</p>
+<p>A comparison plot report is a document that shows a series of comparison plots arranged in two columns from two subsequent routine evaluations. Please have a look at the separate article on <a href="https://fbzwsqualitasag.github.io/qgert/articles/comparison_plots.html">comparison plots</a> to find how these plots are defined an how they are produced.</p>
 </div>
 <div id="comparison-plot-report" class="section level2">
 <h2 class="hasAnchor">
 <a href="#comparison-plot-report" class="anchor"></a>Comparison Plot Report</h2>
+<p>Comparison plot reports can come in two different forms. The first is a generic form and the second is specific for routine genetic evaluations.</p>
+<div id="generic-form" class="section level3">
+<h3 class="hasAnchor">
+<a href="#generic-form" class="anchor"></a>Generic Form</h3>
+<p>The generic form of the comparison plot report requires two directories with a corresponding set of plots or diagrams. The diagrams must be available in .pdf or .png format. The correspondence between a pair of plots is established via the name of the plot file. Corresponding plots are shown side-by-side in the comparison plot report.</p>
+</div>
+<div id="routine-genetic-evaluations" class="section level3">
+<h3 class="hasAnchor">
+<a href="#routine-genetic-evaluations" class="anchor"></a>Routine Genetic Evaluations</h3>
 <p>Comparison plots are done during each routine evaluation for every block of traits. These plots by themselves are only meaningful with a lot of expertise and experience. But when comparing the same plot to the version that was produced during the previous evaluation, then the quality of the plot can be assessed qualitatively in the sense that it is possible to say, whether the characteristics of the current evaluation represented by a specific comparison plot are better compared to the same characteristics from the previous evaluation.</p>
 <p>As a consequence of that the comparison of two plots of the same characteristics from two subsequent routine evaluations provides important information. Therefore the arrangement of two plots of the same characteristics from two subsequent routine evaluations next to each other in two columns makes the comparison seamless and efficient.</p>
+</div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
@@ -149,7 +162,7 @@
 <a href="#updates" class="anchor"></a>Updates</h2>
 <p>Whenever a new version of the comparison plot report creation pipeline is released, two steps must be performed.</p>
 <ol style="list-style-type: decimal">
-<li>Update the R-package <code>qgert</code> using <code><a href="https://devtools.r-lib.org//reference/remote-reexports.html">devtools::install_github("pvrqualitasag/qgert")</a></code> and</li>
+<li>Update the R-package <code>qgert</code> using <code><a href="https://devtools.r-lib.org//reference/remote-reexports.html">devtools::install_github("fbzwsqualitasag/qgert")</a></code> and</li>
 <li>Updating the bash scripts using the following statement</li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /qualstorzws01/data_zws/fbk</span>

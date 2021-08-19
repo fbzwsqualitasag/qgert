@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgert</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0</span>
       </span>
     </div>
 
@@ -67,6 +67,9 @@
     </li>
     <li>
       <a href="../articles/create_toplist_bull_bvch.html">Toplists of Bulls for BVCH</a>
+    </li>
+    <li>
+      <a href="../articles/generic_comparison_plot_report.html">Generic Comparison Plot Report</a>
     </li>
     <li>
       <a href="../articles/gs_job_schedule.html">Scheduling Strategy For GS-Jobs</a>
@@ -135,7 +138,7 @@
 <a href="#alternative-strategy" class="anchor"></a>Alternative Strategy</h1>
 <p>An alternative is to omit the creation of the batches of runs files. The runs in gsRuns.txt are sorted according to the estimated run time from the previous evaluation and are written to one file gsSortedRuns.txt. Then we use a larger number of screens for the parallelisation. The number of screens should be about equal to the number of cores that a server has. Within each screen we do a loop over the lines of gsSortedRuns.txt and start the individual runs one after each other. After starting a given run, we write a file to a subdirectory called <code>started</code> which notifies this run to be started. Before starting a different new run, we first check, whether it has not already been started.</p>
 <hr>
-<p><em>Latest Changes: 2021-08-16 16:40:39 (pvr)</em></p>
+<p><em>Latest Changes: 2021-08-19 11:11:56 (pvr)</em></p>
 </div>
   </div>
 

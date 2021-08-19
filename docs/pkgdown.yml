@@ -7,9 +7,10 @@ articles:
   comparison_plots: comparison_plots.html
   compile_list_ebvfiles: compile_list_ebvfiles.html
   create_toplist_bull_bvch: create_toplist_bull_bvch.html
+  generic_comparison_plot_report: generic_comparison_plot_report.html
   gs_job_schedule: gs_job_schedule.html
   qgert_getting_started: qgert_getting_started.html
   spin_bash_script: spin_bash_script.html
   split_gsruns_sorted_rt: split_gsruns_sorted_rt.html
-last_built: 2021-08-16T14:39Z
+last_built: 2021-08-19T09:11Z
 
