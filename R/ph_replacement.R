@@ -55,7 +55,7 @@ string_replace <- function(ps_tmpl, pl_repl_value,
 get_generic_comparison_plot_report_default_replacement_values <- function(){
   return(list(title                = "Generic Comparison Plot Report",
               author               = "Report Author",
-              date                 = Sys.Date(),
+              date                 = as.character(Sys.Date()),
               output_format        = "pdf_document",
               ps_current_plot_dir  = "Current Plot Directory",
               ps_previous_plot_dir = "Previous Plot Directory"))
