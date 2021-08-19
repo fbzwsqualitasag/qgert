@@ -1,6 +1,6 @@
 # qgert 0.7.0
 
-* Refactor compare_plot_report_generic into a preparation part and a part which does the report
+* Create generic version of function that creates the comparison plot report
 
 # qgert 0.6.0
 
