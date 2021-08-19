@@ -393,12 +393,12 @@ get_plot_chunks <- function(ps_right_dir,
   # initialise result
   s_code_chunk_result <- ''
   # list of plot files from ps_right_dir
-  vec_plot_current <- list.files(path = ps_right_dir, pattern = "\\.png$|\\.pdf$")
-  vec_plot_previous <- list.files(path = ps_left_dir, pattern = "\\.png$|\\.pdf$")
+  vec_plot_right <- get_plot_files(ps_plot_dir = ps_right_dir)
+  vec_plot_left <- get_plot_files(ps_plot_dir = ps_left_dir)
 
   # loop over plot files and add R-code chunks to result string
-  for (idx in seq_along(vec_plot_current)){
-    s_cur_plot_file <- vec_plot_current[idx]
+  for (idx in seq_along(vec_plot_right)){
+    s_cur_plot_file <- vec_plot_right[idx]
     # path to current plot file
     s_right_plot_path <- file.path(ps_right_dir, s_cur_plot_file)
     if (!file.exists(s_right_plot_path)) stop(" *** ERROR [get_plot_chunks]: CANNOT FIND current plot path: ", s_right_plot_path)
@@ -413,8 +413,8 @@ get_plot_chunks <- function(ps_right_dir,
 
   }
   # add plots which are in ps_left_dir, but not in ps_right_dir
-  vec_both_dir <- intersect(vec_plot_current, vec_plot_previous)
-  vec_previous_only <- setdiff(vec_plot_previous, vec_both_dir)
+  vec_both_dir <- intersect(vec_plot_right, vec_plot_left)
+  vec_previous_only <- setdiff(vec_plot_left, vec_both_dir)
   if (length(vec_previous_only) > 0L){
     for (idx in seq_along(vec_previous_only)){
       s_cur_plot_file <- vec_previous_only[idx]
@@ -427,6 +427,30 @@ get_plot_chunks <- function(ps_right_dir,
     }
   }
   return(s_code_chunk_result)
+}
+
+
+## ---- Get List of Plot Files -------------------------------------------------
+
+#' @title Getting a List of Plot Files
+#'
+#' @description
+#' Given a directory \code{ps_plot_dir} with pdf and png plot files, the list
+#' of filenames is returned. If the directory contains a file with a name matching
+#' the regular expression "^ge_plot_report.*\\.pdf$", this file is excluded.
+#'
+#' @param ps_plot_dir directory with plot files
+#'
+#' @return vec_plot_result vector with plot filenames
+get_plot_files <- function(ps_plot_dir) {
+
+  vec_plot_result <- list.files(path = ps_plot_dir, pattern = "\\.png$|\\.pdf$")
+  # exclude existing ge_plot_report files
+  vec_existing_report <- grep(pattern = "^ge_plot_report.*\\.pdf$", vec_plot_result)
+  # if a report-pdf is found, exclude it
+  if (length(vec_existing_report) > 0) vec_plot_result <- vec_plot_result[-vec_existing_report]
+
+  return(vec_plot_result)
 }
 
 
