@@ -297,15 +297,6 @@ create_comparison_plot_report <- function(ps_right_dir,
   # check whether ps_right_dir and ps_left_dir exist
   if (!dir.exists(ps_right_dir)) stop(" *** ERROR create_comparison_plot_report(): CANNOT FIND ps_right_dir: ", ps_right_dir)
   if (!dir.exists(ps_left_dir)) stop(" *** ERROR create_comparison_plot_report(): CANNOT FIND ps_left_dir: ", ps_left_dir)
-  # list of plot files from ps_right_dir
-  vec_plot_current <- list.files(path = ps_right_dir, pattern = "\\.png$|\\.pdf$")
-  vec_plot_previous <- list.files(path = ps_left_dir, pattern = "\\.png$|\\.pdf$")
-  if (pb_debug){
-    qgert_log_info(plogger = lgr, ps_caller = 'create_comparison_plot_report', ps_msg = "List of current plot files: ")
-    print(vec_plot_current)
-    qgert_log_info(plogger = lgr, ps_caller = 'create_comparison_plot_report', ps_msg = "List of previous plot files: ")
-    print(vec_plot_previous)
-  }
 
   # check whether old report file exists
   if (file.exists(ps_out_path)){
@@ -352,46 +343,12 @@ create_comparison_plot_report <- function(ps_right_dir,
   if (!is.null(ps_report_text))
     s_report_result <- paste0(s_report_result, "\n\n", ps_report_text, collapse = "")
 
-  # loop over plot files and add R-code chunks to result string
-  for (idx in seq_along(vec_plot_current)){
-    s_cur_plot_file <- vec_plot_current[idx]
-    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" Current plot file: ", s_cur_plot_file))
-    # path to current plot file
-    s_cur_plot_path <- file.path(ps_right_dir, s_cur_plot_file)
-    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" Current plot from: ", s_cur_plot_path))
-    if (!file.exists(s_cur_plot_path)) stop(" *** ERROR [create_comparison_plot_report]: CANNOT FIND current plot path: ", s_cur_plot_path)
+  # add R-code chunks to include plots
+  s_code_chunks <- get_plot_chunks(ps_right_dir = ps_right_dir,
+                                   ps_left_dir = ps_left_dir,
+                                   ps_diagram_na_path = ps_diagram_na_path)
+  s_report_result <- paste0(s_report_result, s_code_chunks, collapse = "")
 
-    # path to previous plot file
-    s_prev_plot_path <- file.path(ps_left_dir, s_cur_plot_file)
-    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" Previous plot from: ", s_prev_plot_path))
-    if (!file.exists(s_prev_plot_path)) s_prev_plot_path <- ps_diagram_na_path
-
-    # add code chunk to result string
-    if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = " * Adding R-code chunks for including diagrams ...")
-    s_report_result <- paste0(s_report_result, "\n\n### ", s_cur_plot_file, "\n\n```{r, echo=FALSE, fig.show='hold', out.width='50%'}\n", collapse = "")
-    s_report_result <- paste0(s_report_result, "knitr::include_graphics(path = '", s_prev_plot_path, "')\n", collapse = "")
-    s_report_result <- paste0(s_report_result, "knitr::include_graphics(path = '", s_cur_plot_path, "')\n", collapse = "")
-    s_report_result <- paste0(s_report_result, "```\n\n", collapse = "")
-
-  }
-  # add plots which are in ps_left_dir, but not in ps_right_dir
-  vec_both_dir <- intersect(vec_plot_current, vec_plot_previous)
-  vec_previous_only <- setdiff(vec_plot_previous, vec_both_dir)
-  if (length(vec_previous_only) > 0L){
-    for (idx in seq_along(vec_previous_only)){
-      s_cur_plot_file <- vec_previous_only[idx]
-      s_cur_plot_path <- ps_diagram_na_path
-      s_prev_plot_path <- file.path(ps_left_dir, s_cur_plot_file)
-      if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = paste0(" Previous plot from: ", s_prev_plot_path))
-      if (!file.exists(s_prev_plot_path)) stop(" *** ERROR [create_comparison_plot_report]: CANNOT FIND previous plot path: ", s_prev_plot_path)
-      # add code chunk to result string
-      if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = " * Adding R-code chunks for including diagrams ...")
-      s_report_result <- paste0(s_report_result, "\n\n### ", s_cur_plot_file, "\n\n```{r, echo=FALSE, fig.show='hold', out.width='50%'}\n", collapse = "")
-      s_report_result <- paste0(s_report_result, "knitr::include_graphics(path = '", s_prev_plot_path, "')\n", collapse = "")
-      s_report_result <- paste0(s_report_result, "knitr::include_graphics(path = '", s_cur_plot_path, "')\n", collapse = "")
-      s_report_result <- paste0(s_report_result, "```\n\n", collapse = "")
-    }
-  }
   # add session info, if specified
   if (pb_session_info){
     if (pb_debug) qgert_log_info(plogger = lgr, ps_caller = "create_comparison_plot_report", ps_msg = " * Adding session info ...")
@@ -409,7 +366,90 @@ create_comparison_plot_report <- function(ps_right_dir,
 
 
   # return nothing
-  return(invisible(TRUE))
+  return(invisible(NULL))
 }
 
+
+## ---- Addition of R-code chunks for plots -----------------------------------
+
+
+#' @title Adding R-code Chunks to include Plots into the Report
+#'
+#' @description
+#' This function extracts the plot files from the directories given by the
+#' arguments \code{ps_right_dir} and \code{ps_left_dir}. Based on the list
+#' of plot files the R-code chunks that include the plots into the report
+#' are generated and added to the result string.
+#'
+#' @param ps_right_dir directory with plots that appear in the right-hand-side column of the report
+#' @param ps_left_dir directory with plots that appear in the left-hand-side column of the report
+#' @param ps_diagram_na_path path to the missing-diagram replacement
+#'
+#' @return s_code_chunk_result R-code chunks that include the plots into the report
+get_plot_chunks <- function(ps_right_dir,
+                            ps_left_dir,
+                            ps_diagram_na_path) {
+
+  # initialise result
+  s_code_chunk_result <- ''
+  # list of plot files from ps_right_dir
+  vec_plot_current <- list.files(path = ps_right_dir, pattern = "\\.png$|\\.pdf$")
+  vec_plot_previous <- list.files(path = ps_left_dir, pattern = "\\.png$|\\.pdf$")
+
+  # loop over plot files and add R-code chunks to result string
+  for (idx in seq_along(vec_plot_current)){
+    s_cur_plot_file <- vec_plot_current[idx]
+    # path to current plot file
+    s_right_plot_path <- file.path(ps_right_dir, s_cur_plot_file)
+    if (!file.exists(s_right_plot_path)) stop(" *** ERROR [get_plot_chunks]: CANNOT FIND current plot path: ", s_right_plot_path)
+
+    # path to previous plot file
+    s_left_plot_path <- file.path(ps_left_dir, s_cur_plot_file)
+    if (!file.exists(s_left_plot_path)) s_left_plot_path <- ps_diagram_na_path
+
+    # add code chunk to result string
+    s_current_code_chunk <- create_code_chunk(ps_plot_file = s_cur_plot_file, ps_left_plot_path = s_left_plot_path, ps_right_plot_path = s_right_plot_path)
+    s_code_chunk_result <- paste0(s_code_chunk_result, s_current_code_chunk)
+
+  }
+  # add plots which are in ps_left_dir, but not in ps_right_dir
+  vec_both_dir <- intersect(vec_plot_current, vec_plot_previous)
+  vec_previous_only <- setdiff(vec_plot_previous, vec_both_dir)
+  if (length(vec_previous_only) > 0L){
+    for (idx in seq_along(vec_previous_only)){
+      s_cur_plot_file <- vec_previous_only[idx]
+      s_right_plot_path <- ps_diagram_na_path
+      s_left_plot_path <- file.path(ps_left_dir, s_cur_plot_file)
+      if (!file.exists(s_left_plot_path)) stop(" *** ERROR [get_plot_chunks]: CANNOT FIND previous plot path: ", s_prev_plot_path)
+      # add code chunk to result string
+      s_current_code_chunk <- create_code_chunk(ps_plot_file = s_cur_plot_file, ps_left_plot_path = s_left_plot_path, ps_right_plot_path = s_right_plot_path)
+      s_code_chunk_result <- paste0(s_code_chunk_result, s_current_code_chunk)
+    }
+  }
+  return(s_code_chunk_result)
+}
+
+
+## ---- Generate Code Chunks that include Plots --------------------------------
+
+
+#' Generate R-code Chunk to include Plot Pairs
+#'
+#' @description
+#' Given the name of the plot file and the paths to the plot pair to be included
+#' in the report, the R-code chunk used in the RMarkdown report is generated and
+#' returned as a string.
+#'
+#' @param ps_plot_file name of the plot file
+#' @param ps_left_plot_path path to plot on the left-hand-side
+#' @param ps_right_plot_path path to the plot on the right-hand-side
+#'
+#' @return s_code_chunk_result R-code chunk  as a string which includes the plots
+create_code_chunk <- function(ps_plot_file, ps_left_plot_path, ps_right_plot_path) {
+  s_code_chunk_result <- paste0("\n\n### ", ps_plot_file, "\n\n```{r, echo=FALSE, fig.show='hold', out.width='50%'}\n", collapse = "")
+  s_code_chunk_result <- paste0(s_code_chunk_result, "knitr::include_graphics(path = '", ps_left_plot_path, "')\n", collapse = "")
+  s_code_chunk_result <- paste0(s_code_chunk_result, "knitr::include_graphics(path = '", ps_right_plot_path, "')\n", collapse = "")
+  s_code_chunk_result <- paste0(s_code_chunk_result, "```\n\n", collapse = "")
+  return(s_code_chunk_result)
+}
 

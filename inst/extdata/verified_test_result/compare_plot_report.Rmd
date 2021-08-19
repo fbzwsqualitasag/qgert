@@ -1,0 +1,80 @@
+---
+title: Test Generic Comparison Plot Report
+author: Peter von Rohr
+date: 2021-08-18
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Disclaimer
+Analogous plots from two different directories are shown side-by-side. Analogy between pairs of plots is determined by the respective name of the plot files.
+The following table shows the directories from where the plots were taken from.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+tbl_plot <- tibble::tibble(Plot = c("left-hand-side", "right-hand-side"),
+                           Directory = c("/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/prevpath",
+                                         "/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/curpath"))
+knitr::kable(tbl_plot)
+```
+
+
+
+## Comparison Plots
+ The following plots show comparisons between four subsequent evaluations plus two arbitrarily chosen plots taken from templates of RMarkdown documents.
+
+### diff_estimate_ggd_P_P.pdf
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/prevpath/diff_estimate_ggd_P_P.pdf')
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/curpath/diff_estimate_ggd_P_P.pdf')
+```
+
+
+
+### diff_estimate_lgd_P_P.pdf
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/prevpath/diff_estimate_lgd_P_P.pdf')
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/curpath/diff_estimate_lgd_P_P.pdf')
+```
+
+
+
+### diff_estimate_ngd_P_P.pdf
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/prevpath/diff_estimate_ngd_P_P.pdf')
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/curpath/diff_estimate_ngd_P_P.pdf')
+```
+
+
+
+### diff_estimate_tdd_P_P.pdf
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/prevpath/diff_estimate_tdd_P_P.pdf')
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/curpath/diff_estimate_tdd_P_P.pdf')
+```
+
+
+
+### pressure.png
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/templates/Diagram_NA.pdf')
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/curpath/pressure.png')
+```
+
+
+
+### mt_cars.png
+
+```{r, echo=FALSE, fig.show='hold', out.width='50%'}
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/extdata/prevpath/mt_cars.png')
+knitr::include_graphics(path = '/Users/pvr/Data/Projects/Github/fbzwsqualitasag/qgert/inst/templates/Diagram_NA.pdf')
+```
+
+ 

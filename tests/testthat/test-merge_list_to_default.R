@@ -1,3 +1,6 @@
+context(desc = "Merging list to default version")
+library(qgert)
+
 test_that("merge list to default", {
   l_expect_result <- list(A = 10L,
                           B = 20L,

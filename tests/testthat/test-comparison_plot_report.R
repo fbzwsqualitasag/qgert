@@ -6,7 +6,8 @@ test_that("Comparison plot creation works", {
   s_cur_dir <- system.file('extdata', 'curgel', package = 'qgert')
   s_prev_dir <- system.file('extdata', 'prevgel', package = 'qgert')
   s_rmd_template <- system.file('templates', 'compare_plots.Rmd.template', package = 'qgert')
-  s_rmd_verified_result <- file.path(s_cur_dir, 'ge_plot_report.Rmd')
+  s_verified_test_result_dir <- system.file('extdata', 'verified_test_result', package = 'qgert')
+  s_rmd_verified_result <- file.path(s_verified_test_result_dir, 'ge_plot_report.Rmd')
   # create temporary working directory
   s_work_root <- '.'
   s_work_dir <- file.path(s_work_root, basename(s_cur_dir))
