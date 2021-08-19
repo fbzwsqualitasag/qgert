@@ -18,7 +18,7 @@
 #' @param pb_debug flag indicating debugging mode
 #' @param plogger logger object
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' qgert::create_toplist_bvch_bull(ps_eval_label = '2008')
 #' }

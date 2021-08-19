@@ -34,3 +34,8 @@ title: Create Toplists for BVCH-Bulls
 date: 2020-08-11
 ---
 }
+\examples{
+\dontrun{
+qgert::create_toplist_bvch_bull(ps_eval_label = '2008')
+}
+}

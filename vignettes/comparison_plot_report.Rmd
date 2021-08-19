@@ -24,10 +24,16 @@ The definition of a `comparison plot report` and how such reports are generated 
 
 
 ## Terminology
-A comparison plot report is a document that shows a series of comparison plots arranged in two columns from two subsequent routine evaluations. Please have a look at the separate article on [comparison plots](https://pvrqualitasag.github.io/qgert/articles/comparison_plots.html) to find how these plots are defined an how they are produced.
+A comparison plot report is a document that shows a series of comparison plots arranged in two columns from two subsequent routine evaluations. Please have a look at the separate article on [comparison plots](https://fbzwsqualitasag.github.io/qgert/articles/comparison_plots.html) to find how these plots are defined an how they are produced.
 
 
 ## Comparison Plot Report
+Comparison plot reports can come in two different forms. The first is a generic form and the second is specific for routine genetic evaluations.
+
+### Generic Form
+The generic form of the comparison plot report requires two directories with a corresponding set of plots or diagrams. The diagrams must be available in .pdf or .png format. The correspondence between a pair of plots is established via the name of the plot file. Corresponding plots are shown side-by-side in the comparison plot report. 
+
+### Routine Genetic Evaluations
 Comparison plots are done during each routine evaluation for every block of traits. These plots by themselves are only meaningful with a lot of expertise and experience. But when comparing the same plot to the version that was produced during the previous evaluation, then the quality of the plot can be assessed qualitatively in the sense that it is possible to say, whether the characteristics of the current evaluation represented by a specific comparison plot are better compared to the same characteristics from the previous evaluation.
 
 As a consequence of that the comparison of two plots of the same characteristics from two subsequent routine evaluations provides important information. Therefore the arrangement of two plots of the same characteristics from two subsequent routine evaluations next to each other in two columns makes the comparison seamless and efficient.
@@ -55,7 +61,7 @@ For trait groups other than `fbk` there are analogous R wrapper functions and co
 ## Updates
 Whenever a new version of the comparison plot report creation pipeline is released, two steps must be performed. 
 
-1. Update the R-package `qgert` using `devtools::install_github("pvrqualitasag/qgert")` and 
+1. Update the R-package `qgert` using `devtools::install_github("fbzwsqualitasag/qgert")` and 
 2. Updating the bash scripts using the following statement
 
 ```{bash, eval=FALSE}

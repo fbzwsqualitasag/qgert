@@ -1,0 +1,23 @@
+---
+title: <ph>title</ph>
+author: <ph>author</ph>
+date: <ph>date</ph>
+output: <ph>output_format</ph>
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Disclaimer
+Analogous plots from two different directories are shown side-by-side. Analogy between pairs of plots is determined by the respective name of the plot files.
+The following table shows the directories from where the plots were taken from.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+tbl_plot <- tibble::tibble(Plot = c("left-hand-side", "right-hand-side"),
+                           Directory = c("<ph>ps_previous_plot_dir</ph>",
+                                         "<ph>ps_current_plot_dir</ph>"))
+knitr::kable(tbl_plot)
+```
+
+
