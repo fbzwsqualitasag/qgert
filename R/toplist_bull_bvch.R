@@ -1,7 +1,4 @@
-#' ---
-#' title: Create Toplists for BVCH-Bulls
-#' date: 2020-08-11
-#' ---
+## ---- Main Toplist Creation Function ----------------------------------------
 #'
 #' @title Create Toplists for BVCH-Bulls
 #'
@@ -65,7 +62,7 @@ create_toplist_bvch_bull <- function(ps_eval_label,
 }
 
 
-#' --- Writing TopList To xlsx ----------------------------------------------- #
+## ---- Writing TopList To xlsx -----------------------------------------------
 #'
 #' @title Write Toplist Information to xlsx
 #'
@@ -117,7 +114,7 @@ write_tl_xlsx <- function(pl_toplist, ptbl_trait, ps_xlsx_file = "example.xlsx")
   return(invisible(TRUE))
 }
 
-#' --- Reading TopList Input ------------------------------------------------- #
+## --- Reading TopList Input ---------------------------------------------------
 #'
 #' @title Read Toplist Input From CSV-Files
 #'
@@ -198,7 +195,7 @@ read_top_list_info3 <- function(pl_breed_input,
 }
 
 
-#' --- Determine Trait Names -------------------------------------------------- #
+## --- Determine Trait Names --------------------------------------------------
 #'
 #' @title Default Trait Information
 #'
@@ -218,7 +215,7 @@ get_default_tbl_trait_name_bvch <- function(){
 
 
 
-#' --- Defaults and Constants ------------------------------------------------- #
+## --- Defaults and Constants -------------------------------------------------
 #'
 #'
 #' @title Vector of Non-Trait Columns
