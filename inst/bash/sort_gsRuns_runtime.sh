@@ -152,7 +152,6 @@ while getopts ":d:g:l:m:o:vh" FLAG; do
         g)
             GSRUNSLIST=$OPTARG
         ;;
-        ;;
         l)
             LOGFILE=$OPTARG
         ;;
