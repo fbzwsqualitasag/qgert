@@ -72,7 +72,7 @@ create_ge_compare_plot_report_carcass_smn <- function(pn_cur_ge_label,
   # check whether root of directory of previous plots is specified
   s_prev_plot_root <- file.path(l_plot_opts$arch_dir_stem,
                                 pn_prev_ge_label,
-                                "vms/work/FLP_BK")
+                                "vms/work/FLP_NB")
   if (!is.null(ps_prev_plot_root)){
     s_prev_plot_root <- ps_prev_plot_root
   }
