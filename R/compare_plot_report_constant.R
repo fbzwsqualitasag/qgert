@@ -322,22 +322,44 @@ get_default_plot_opts_weaning <- function(){
                                        ' on the right.', collapse = '')))
 }
 
-## -- Defaults for BIRTH ---------------------------------------------------
 
-#' @title Default Plot Options For BIRTH
+## -- Defaults for CALVING BEEF ---------------------------------------------------
+
+#' @title Default Plot Options For CALVING BEEF
 #'
 #' @description
 #' Return a list with specific defaults and constants that are used
 #' to produce the comparison plot report for the trait group
-#' BIRTH
+#' CALVING BEEF
 #'
-get_default_plot_opts_birth <- function(){
+get_default_plot_opts_calving_beef <- function(){
   # return list of default options
-  return(list(ge_dir_stem     = "/qualstorzws01/data_zws/vms/work/GA",
+  return(list(ge_dir_stem     = "/qualstorzws01/data_zws/vms/work/GA_Beef",
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
-              rmd_report_stem = "ge_plot_report_birth",
-              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Birth}',
+              rmd_report_stem = "ge_plot_report_calving_beef",
+              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Calving Beef}',
+                                       ' between GE-run {pn_prev_ge_label}',
+                                       ' on the left and the current GE-run {pn_cur_ge_label}',
+                                       ' on the right.', collapse = '')))
+}
+
+## -- Defaults for CALVING DAIRY ---------------------------------------------------
+
+#' @title Default Plot Options For CALVING DAIRY
+#'
+#' @description
+#' Return a list with specific defaults and constants that are used
+#' to produce the comparison plot report for the trait group
+#' CALVING DAIRY
+#'
+get_default_plot_opts_calving_dairy <- function(){
+  # return list of default options
+  return(list(ge_dir_stem     = "/qualstorzws01/data_zws/vms/work/GA_Dairy",
+              arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
+              rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
+              rmd_report_stem = "ge_plot_report_calving_dairy",
+              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Calving Dairy}',
                                        ' between GE-run {pn_prev_ge_label}',
                                        ' on the left and the current GE-run {pn_cur_ge_label}',
                                        ' on the right.', collapse = '')))
