@@ -29,10 +29,7 @@ names, the results are extracted from the input files and are then written to
 an xlsx-file.
 }
 \details{
----
-title: Create Toplists for BVCH-Bulls
-date: 2020-08-11
----
+
 }
 \examples{
 \dontrun{

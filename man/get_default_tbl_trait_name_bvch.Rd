@@ -14,6 +14,3 @@ The default version of trait information is read from a csv-file in the package.
 If different traits must be considered, then they have to be specified explicitly
 in the top creation function.
 }
-\details{
---- Determine Trait Names -------------------------------------------------- #
-}

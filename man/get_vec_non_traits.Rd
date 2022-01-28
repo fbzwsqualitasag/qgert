@@ -13,6 +13,3 @@ Vector of column names that are not to be treated as traits
 This function returns a fixed vector of columns that are not treated as
 traits.
 }
-\details{
---- Defaults and Constants ------------------------------------------------- #
-}

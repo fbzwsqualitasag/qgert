@@ -16,6 +16,3 @@ write_tl_xlsx(pl_toplist, ptbl_trait, ps_xlsx_file = "example.xlsx")
 \description{
 The extracted toplist information is written to an xlsx file.
 }
-\details{
---- Writing TopList To xlsx ----------------------------------------------- #
-}

@@ -29,8 +29,5 @@ The content of the csv-files are read into a tibble and all tibbles are
 combined into a list.
 }
 \details{
---- Reading TopList Input ------------------------------------------------- #
-
-
 This function assumes that there is a separate csv-file for each breed.
 }

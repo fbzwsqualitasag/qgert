@@ -2,7 +2,8 @@
 
 export(age_in_days)
 export(create_comparison_plot_report)
-export(create_ge_compare_plot_report_birth)
+export(create_ge_compare_plot_report_calving_beef)
+export(create_ge_compare_plot_report_calving_dairy)
 export(create_ge_compare_plot_report_carcass_smk)
 export(create_ge_compare_plot_report_carcass_smn)
 export(create_ge_compare_plot_report_carcass_smt)
