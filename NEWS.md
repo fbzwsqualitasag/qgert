@@ -1,3 +1,7 @@
+# qgert 0.8.0
+
+* Modify creation of gsSortedRunsList such that only one file is created and that snpbin version are taken from end of list
+
 # qgert 0.7.0
 
 * Create generic version of function that creates the comparison plot report
