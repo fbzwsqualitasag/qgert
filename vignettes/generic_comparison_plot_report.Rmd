@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+if (!is.element("rmdhelp", installed.packages())) remotes::install_github(repo = "charlotte-ngs/rmdhelp")
 # rmdhelp::show_knit_hook_call()
 knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
 ```
