@@ -1,0 +1,34 @@
+---
+title: "Location Independent Comparison Plot Reports"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Location Independent Comparison Plot Reports}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, eval=FALSE}
+library(qgert)
+```
+
+
+# Disclaimer
+Experiments with location independent comparison plot reports are documented.
+
+
+# Background
+The current version of functions create comparison plot reports for different traits using their input from fixed directories and writing the report into fixed output files. With the development of evaluation systems that are location independent, we also need comparison plot reports that are more flexible. 
+
+In a first step, the generic comparison plot creator function `create_comparison_plot_report()` can be used. The only thing that might be missing in the current version of that function is how to deal with gzipped plot files.
+
+
+# Location Independence
+So far most of the genetic evaluations are run under the directory root `/qualstorzws01/data_zws`. In this context _location independence_ means that the directory root for all evaluations can be freely chosen. 
+
