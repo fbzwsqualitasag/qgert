@@ -316,7 +316,7 @@ get_default_plot_opts_weaning <- function(){
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
               rmd_report_stem = "ge_plot_report_weaning",
-              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Weaning}',
+              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Weaning',
                                        ' between GE-run {pn_prev_ge_label}',
                                        ' on the left and the current GE-run {pn_cur_ge_label}',
                                        ' on the right.', collapse = '')))
@@ -338,7 +338,7 @@ get_default_plot_opts_calving_beef <- function(){
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
               rmd_report_stem = "ge_plot_report_calving_beef",
-              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Calving Beef}',
+              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Calving Beef',
                                        ' between GE-run {pn_prev_ge_label}',
                                        ' on the left and the current GE-run {pn_cur_ge_label}',
                                        ' on the right.', collapse = '')))
@@ -359,7 +359,7 @@ get_default_plot_opts_calving_dairy <- function(){
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
               rmd_report_stem = "ge_plot_report_calving_dairy",
-              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Calving Dairy}',
+              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Calving Dairy',
                                        ' between GE-run {pn_prev_ge_label}',
                                        ' on the left and the current GE-run {pn_cur_ge_label}',
                                        ' on the right.', collapse = '')))
@@ -380,7 +380,7 @@ get_default_plot_opts_carcass_smk <- function(){
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
               rmd_report_stem = "ge_plot_report_carcass",
-              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Carcass-BK}',
+              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Carcass-BK',
                                        ' between GE-run {pn_prev_ge_label}',
                                        ' on the left and the current GE-run {pn_cur_ge_label}',
                                        ' on the right.', collapse = '')))
@@ -401,7 +401,7 @@ get_default_plot_opts_carcass_smn <- function(){
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
               rmd_report_stem = "ge_plot_report_carcass",
-              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Carcass-NB}',
+              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Carcass-NB',
                                        ' between GE-run {pn_prev_ge_label}',
                                        ' on the left and the current GE-run {pn_cur_ge_label}',
                                        ' on the right.', collapse = '')))
@@ -422,7 +422,7 @@ get_default_plot_opts_carcass_smt <- function(){
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
               rmd_report_stem = "ge_plot_report_carcass",
-              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Carcass-BT}',
+              report_text     = paste0('## Comparison Of Plots\nPlots compare estimates of Carcass-BT',
                                        ' between GE-run {pn_prev_ge_label}',
                                        ' on the left and the current GE-run {pn_cur_ge_label}',
                                        ' on the right.', collapse = '')))
