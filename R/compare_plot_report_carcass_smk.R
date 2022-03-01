@@ -103,7 +103,7 @@ create_ge_compare_plot_report_carcass_smk <- function(pn_cur_ge_label,
              ps_msg    = paste0(" ** Target directory for restored plots: ", s_trg_dir))
 
   # specify the name of the report file
-  s_rep_path <- file.path(s_ge_dir, paste0('ge_plot_report_carcass_compare.Rmd', collapse = ''))
+  s_rep_path <- file.path(s_ge_dir, paste0(l_plot_opts$rmd_report_stem, '.Rmd', collapse = ''))
   if (pb_debug)
     qgert_log_info(plogger = lgr, ps_caller = "create_ge_compare_plot_report_carcass_smk",
              ps_msg    = paste0(" ** Path to report created: ", s_rep_path))
