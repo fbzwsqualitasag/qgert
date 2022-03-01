@@ -1,3 +1,7 @@
+# qgert 0.8.1
+
+* Add shell scripts and defaults for calving_beef and calving_dairy
+
 # qgert 0.8.0
 
 * Modify creation of gsSortedRunsList such that only one file is created and that snpbin version are taken from end of list
