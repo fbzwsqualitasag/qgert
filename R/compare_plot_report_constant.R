@@ -334,7 +334,7 @@ get_default_plot_opts_weaning <- function(){
 #'
 get_default_plot_opts_calving_beef <- function(){
   # return list of default options
-  return(list(ge_dir_stem     = "/qualstorzws01/data_zws/vms/work/GA_Beef",
+  return(list(ge_dir_stem     = "/qualstorzws01/data_zws/vms/work/GA_BEEF",
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
               rmd_report_stem = "ge_plot_report_calving_beef",
@@ -355,7 +355,7 @@ get_default_plot_opts_calving_beef <- function(){
 #'
 get_default_plot_opts_calving_dairy <- function(){
   # return list of default options
-  return(list(ge_dir_stem     = "/qualstorzws01/data_zws/vms/work/GA_Dairy",
+  return(list(ge_dir_stem     = "/qualstorzws01/data_zws/vms/work/GA_DAIRY",
               arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
               rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
               rmd_report_stem = "ge_plot_report_calving_dairy",
