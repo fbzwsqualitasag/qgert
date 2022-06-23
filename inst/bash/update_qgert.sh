@@ -160,7 +160,7 @@ start_msg
 #' Notice there is no ":" after "h". The leading ":" suppresses error messages from
 #' getopts. This is required to get my unrecognized option code to work.
 #+ getopts-parsing, eval=FALSE
-SERVERS=(beverin castor dom eiger niesen speer titlis)
+SERVERS=(beverin castor dom eiger niesen speer titlis wolga)
 SERVERNAME=""
 REFERENCE=""
 USERNAME=zws
