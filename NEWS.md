@@ -1,3 +1,7 @@
+# qgert 0.10.0
+
+* Comparison plot reports for KER
+
 # qgert 0.9.0
 
 * Location independent creation of plot reports. Postponed to later version
