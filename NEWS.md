@@ -1,3 +1,7 @@
+# qgert 0.9.0
+
+* Location independent creation of plot reports. Postponed to later version
+
 # qgert 0.8.0
 
 * Modify creation of gsSortedRunsList such that only one file is created and that snpbin version are taken from end of list
