@@ -8,8 +8,6 @@
 #' names, the results are extracted from the input files and are then written to
 #' an xlsx-file.
 #'
-#' @details
-#'
 #' @param ps_eval_label evaluation label
 #' @param pl_breed_input list with input items consisting of breed names, input files and length of rankings
 #' @param pb_debug flag indicating debugging mode

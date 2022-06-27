@@ -28,9 +28,6 @@ number of records that should be listed in the toplist and a tibble with trait
 names, the results are extracted from the input files and are then written to
 an xlsx-file.
 }
-\details{
-
-}
 \examples{
 \dontrun{
 qgert::create_toplist_bvch_bull(ps_eval_label = '2008')
