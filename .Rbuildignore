@@ -7,3 +7,6 @@ inst/.DS_Store
 inst/templates/.DS_Store
 .Rproj.user
 .git
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

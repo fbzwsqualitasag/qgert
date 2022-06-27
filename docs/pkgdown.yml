@@ -1,5 +1,5 @@
-pandoc: 2.11.4
-pkgdown: 1.5.1
+pandoc: 2.17.1.1
+pkgdown: 2.0.5
 pkgdown_sha: ~
 articles:
   alternative_compare_plot: alternative_compare_plot.html
@@ -12,5 +12,5 @@ articles:
   qgert_getting_started: qgert_getting_started.html
   spin_bash_script: spin_bash_script.html
   split_gsruns_sorted_rt: split_gsruns_sorted_rt.html
-last_built: 2021-08-19T09:11Z
+last_built: 2022-06-27T12:09Z
 

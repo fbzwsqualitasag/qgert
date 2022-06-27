@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,23 +33,17 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgert</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.10.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -91,7 +87,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/fbzwsqualitasag/qgert/">
+  <a href="https://github.com/fbzwsqualitasag/qgert/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -106,57 +102,100 @@
 
       
 
-      </header><script src="generic_comparison_plot_report_files/header-attrs-2.7/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Generic Comparison Plot Report</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/fbzwsqualitasag/qgert/blob/master/vignettes/generic_comparison_plot_report.Rmd"><code>vignettes/generic_comparison_plot_report.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/fbzwsqualitasag/qgert/blob/HEAD/vignettes/generic_comparison_plot_report.Rmd" class="external-link"><code>vignettes/generic_comparison_plot_report.Rmd</code></a></small>
       <div class="hidden name"><code>generic_comparison_plot_report.Rmd</code></div>
 
     </div>
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">qgert</span>)</pre></body></html></div>
-<div id="summary" class="section level1">
-<h1 class="hasAnchor">
-<a href="#summary" class="anchor"></a>Summary</h1>
-<p>tl;dr. Given two directories <code>dir1</code> and <code>dir2</code>, containing plot files stored in pdf or png-format, the follwoing command</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="kw pkg">qgert</span><span class="kw ns">::</span><span class="fu"><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report</a></span>(<span class="kw">ps_right_dir</span> <span class="kw">=</span> <span class="no">dir1</span>, <span class="kw">ps_left_dir</span> <span class="kw">=</span> <span class="no">dir2</span>)</pre></body></html></div>
-<p>creates a RMarkdown report (<code>generic_comparison_plot_report.Rmd</code>) in the current directory where analogous plots from the two directories are shown side-by-side. The RMarkdown report is automatically rendered into a pdf document (<code>generic_comparison_plot_report.pdf</code>) which can also be found in the current working directory.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fbzwsqualitasag.github.io/qgert/" class="external-link">qgert</a></span><span class="op">)</span></span></code></pre></div>
+<div class="section level2">
+<h2 id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a>
+</h2>
+<p>tl;dr. Given two directories <code>dir1</code> and <code>dir2</code>,
+containing plot files stored in pdf or png-format, the follwoing
+command</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">qgert</span><span class="fu">::</span><span class="fu"><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report</a></span><span class="op">(</span>ps_right_dir <span class="op">=</span> <span class="va">dir1</span>, ps_left_dir <span class="op">=</span> <span class="va">dir2</span><span class="op">)</span></span></code></pre></div>
+<p>creates a RMarkdown report
+(<code>generic_comparison_plot_report.Rmd</code>) in the current
+directory where analogous plots from the two directories are shown
+side-by-side. The RMarkdown report is automatically rendered into a pdf
+document (<code>generic_comparison_plot_report.pdf</code>) which can
+also be found in the current working directory.</p>
 </div>
-<div id="background" class="section level1">
-<h1 class="hasAnchor">
-<a href="#background" class="anchor"></a>Background</h1>
-<p>Results of statistical analyses are often presented as diagrams. When we are interested in the effect of changes in the analysis on the results, they should be visible in the comparison of the result diagrams. Hence there is a need for comparing the same type of diagram for different context parameters.</p>
+<div class="section level2">
+<h2 id="background">Background<a class="anchor" aria-label="anchor" href="#background"></a>
+</h2>
+<p>Results of statistical analyses are often presented as diagrams. When
+we are interested in the effect of changes in the analysis on the
+results, they should be visible in the comparison of the result
+diagrams. Hence there is a need for comparing the same type of diagram
+for different context parameters.</p>
 </div>
-<div id="purpose" class="section level1">
-<h1 class="hasAnchor">
-<a href="#purpose" class="anchor"></a>Purpose</h1>
-<p>Given two directories each containing a set of plot files stored either as pdf-files or in png-format. Furthermore, we assume that the plot files in the two directories normally come in pairs with the same file name. The function <code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code> from the <code>qgert</code> package takes the path to the two directories as arguments and shows the plots which are stored in files with the same name side-by-side in a RMarkdown report. This makes the comparison of the two plots a lot easier.</p>
+<div class="section level2">
+<h2 id="purpose">Purpose<a class="anchor" aria-label="anchor" href="#purpose"></a>
+</h2>
+<p>Given two directories each containing a set of plot files stored
+either as pdf-files or in png-format. Furthermore, we assume that the
+plot files in the two directories normally come in pairs with the same
+file name. The function <code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code>
+from the <code>qgert</code> package takes the path to the two
+directories as arguments and shows the plots which are stored in files
+with the same name side-by-side in a RMarkdown report. This makes the
+comparison of the two plots a lot easier.</p>
 </div>
-<div id="result" class="section level1">
-<h1 class="hasAnchor">
-<a href="#result" class="anchor"></a>Result</h1>
-<p>The result of running the function <code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code> is a report that shows pairs of analogous plots side-by-side. An example of such a pair of plots is shown below.</p>
-<p><img src="odg/plot-pairs-report.png" width="212"></p>
-<p>If any of the plot files is missing in one of the directories a placeholder directory showing the string ‘NA’ is included. This is shown below.</p>
-<p><img src="odg/missing-plot-report.png" width="212"></p>
+<div class="section level2">
+<h2 id="result">Result<a class="anchor" aria-label="anchor" href="#result"></a>
+</h2>
+<p>The result of running the function
+<code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code> is a report that shows
+pairs of analogous plots side-by-side. An example of such a pair of
+plots is shown below.</p>
+<p><img src="odg/plot-pairs-report.png"><!-- --></p>
+<p>If any of the plot files is missing in one of the directories a
+placeholder directory showing the string ‘NA’ is included. This is shown
+below.</p>
+<p><img src="odg/missing-plot-report.png"><!-- --></p>
 </div>
-<div id="customisation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#customisation" class="anchor"></a>Customisation</h1>
-<p>As shown in the summary section above, the function <code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code> requires only the two directories to be specified as input parameters. But there are more options with which the generated report can be modified and enhanced. The generated report is based on a template which contains placeholders allowing to parameterize the generated report. The parametrisation allows to insert specific characteristics of a given report into the RMarkdown source file. These characteristics include the title, the author and the output format of the report. The specific information is passed as a list to the argument <code>pl_repl_value</code>. Hence the following call to the function <code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code> modifies the title and the author in the report.</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r">qgert::create_comparison_plot_report(ps_right_dir = dir1, 
-           ps_left_dir = dir2,
-           pl_repl_value = list(title = "Test Generic Comparison Plot Report", 
-                                author = "Peter von Rohr")</pre></body></html></div>
-<p>As can be seen from the following screenshot, the title and the author have been modified according to the specified input.</p>
-<p><img src="odg/scrsh-title-author.png" width="212"></p>
-<p>The following table gives a list of all available parameters for the function <code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code></p>
+<div class="section level2">
+<h2 id="customisation">Customisation<a class="anchor" aria-label="anchor" href="#customisation"></a>
+</h2>
+<p>As shown in the summary section above, the function
+<code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code> requires only the two
+directories to be specified as input parameters. But there are more
+options with which the generated report can be modified and enhanced.
+The generated report is based on a template which contains placeholders
+allowing to parameterize the generated report. The parametrisation
+allows to insert specific characteristics of a given report into the
+RMarkdown source file. These characteristics include the title, the
+author and the output format of the report. The specific information is
+passed as a list to the argument <code>pl_repl_value</code>. Hence the
+following call to the function
+<code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code> modifies the title and the
+author in the report.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>qgert<span class="sc">::</span><span class="fu">create_comparison_plot_report</span>(<span class="at">ps_right_dir =</span> dir1, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">ps_left_dir =</span> dir2,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">pl_repl_value =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Test Generic Comparison Plot Report"</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                                <span class="at">author =</span> <span class="st">"Peter von Rohr"</span>)</span></code></pre></div>
+<p>As can be seen from the following screenshot, the title and the
+author have been modified according to the specified input.</p>
+<p><img src="odg/scrsh-title-author.png"><!-- --></p>
+<p>The following table gives a list of all available parameters for the
+function <code><a href="../reference/create_comparison_plot_report.html">create_comparison_plot_report()</a></code></p>
 <table class="table">
+<colgroup>
+<col width="23%">
+<col width="76%">
+</colgroup>
 <thead><tr class="header">
 <th align="left">Parameter</th>
 <th align="left">Description</th>
@@ -180,7 +219,8 @@
 </tr>
 <tr class="odd">
 <td align="left">ps_report_text</td>
-<td align="left">Additional text to be included at the beginning of the report</td>
+<td align="left">Additional text to be included at the beginning of the
+report</td>
 </tr>
 <tr class="even">
 <td align="left">pl_repl_value</td>
@@ -226,11 +266,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Peter von Rohr.</p>
+  <p></p>
+<p>Developed by Peter von Rohr.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer>
@@ -238,6 +280,8 @@
 
   
 
+
+  
 
   </body>
 </html>

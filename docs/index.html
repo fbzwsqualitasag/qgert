@@ -21,6 +21,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -33,23 +35,17 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">qgert</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.10.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -93,7 +89,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/fbzwsqualitasag/qgert/">
+  <a href="https://github.com/fbzwsqualitasag/qgert/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -110,40 +106,41 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="qgert" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#qgert" class="anchor"></a>QGERT</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="qgert">QGERT<a class="anchor" aria-label="anchor" href="#qgert"></a>
+</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>QGERT stands for <strong>Qualitas Genetic Evaluation Routine Tools</strong>. The goal of QGERT is to provide a set of standardized tools to prepare data and to post-process results of the routine genetic evaluation. The main focus of the post-processing is on quality assurance and on results checking. As a consequence of that, principles of reproducibility of all tasks are followed as closely as possible.</p>
-<p>The package website is available at: <a href="https://fbzwsqualitasag.github.io/qgert/" class="uri">https://fbzwsqualitasag.github.io/qgert/</a></p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>Because the package is only useful in the context of the genetic evaluations done at <a href="https://qualitasag.ch">Qualitas AG</a>, the package will not be released to CRAN. The development version can be installed from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"fbzwsqualitasag/qgert"</span>)</pre></div>
+<p>The package website is available at: <a href="https://fbzwsqualitasag.github.io/qgert/" class="external-link uri">https://fbzwsqualitasag.github.io/qgert/</a></p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>Because the package is only useful in the context of the genetic evaluations done at <a href="https://qualitasag.ch" class="external-link">Qualitas AG</a>, the package will not be released to CRAN. The development version can be installed from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"fbzwsqualitasag/qgert"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
 <p>Examples of basic use cases are shown in the different articles that are available from this site. A short description of all available articles is listed below.</p>
 <ul>
 <li>
-<a href="https://fbzwsqualitasag.github.io/qgert/articles/qgert_getting_started.html">Getting Started</a>: Description of basic usage of the functionality provided by <code>qgert</code>.</li>
+<a href="https://fbzwsqualitasag.github.io/qgert/articles/qgert_getting_started.html" class="external-link">Getting Started</a>: Description of basic usage of the functionality provided by <code>qgert</code>.</li>
 <li>
-<a href="https://fbzwsqualitasag.github.io/qgert/articles/comparison_plots.html">Comparison Plots</a>: Explanation of what a comparison plot is.</li>
+<a href="https://fbzwsqualitasag.github.io/qgert/articles/comparison_plots.html" class="external-link">Comparison Plots</a>: Explanation of what a comparison plot is.</li>
 <li>
-<a href="https://fbzwsqualitasag.github.io/qgert/articles/comparison_plot_report.html">Comparison Plot Report</a>: Combination of comparison plots in a single report. Reports can be generated from within R or with a wrapper bash-script.</li>
+<a href="https://fbzwsqualitasag.github.io/qgert/articles/comparison_plot_report.html" class="external-link">Comparison Plot Report</a>: Combination of comparison plots in a single report. Reports can be generated from within R or with a wrapper bash-script.</li>
 <li>
-<a href="https://fbzwsqualitasag.github.io/qgert/articles/spin_bash_script.html">Spinning bash script</a>: Conversion of specially annotated bash scripts into an HTML page.</li>
+<a href="https://fbzwsqualitasag.github.io/qgert/articles/spin_bash_script.html" class="external-link">Spinning bash script</a>: Conversion of specially annotated bash scripts into an HTML page.</li>
 <li>
-<a href="https://fbzwsqualitasag.github.io/qgert/articles/split_gsruns_sorted_rt.html">Split gsRuns According To Predicted Runtimes</a>: A list of computing jobs is split into smaller computation batches according to estimated runtimes from a previous evaluation.</li>
+<a href="https://fbzwsqualitasag.github.io/qgert/articles/split_gsruns_sorted_rt.html" class="external-link">Split gsRuns According To Predicted Runtimes</a>: A list of computing jobs is split into smaller computation batches according to estimated runtimes from a previous evaluation.</li>
 </ul>
 </div>
-<div id="latest-change" class="section level2">
-<h2 class="hasAnchor">
-<a href="#latest-change" class="anchor"></a>Latest Change</h2>
+<div class="section level2">
+<h2 id="latest-change">Latest Change<a class="anchor" aria-label="anchor" href="#latest-change"></a>
+</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Mon Apr 26 17:34:50 2021 CEST  --  pvr</span></span></code></pre></div>
 </div>
 </div>
@@ -151,38 +148,50 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/fbzwsqualitasag/qgert/">https://​github.com/​fbzwsqualitasag/​qgert/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/fbzwsqualitasag/qgert/issues">https://​github.com/​fbzwsqualitasag/​qgert/​issues</a>
-</li>
+<li><a href="https://github.com/fbzwsqualitasag/qgert/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/fbzwsqualitasag/qgert/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing qgert</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Peter von Rohr <br><small class="roles"> Author, maintainer </small>  </li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Peter von Rohr.</p>
+  <p></p>
+<p>Developed by Peter von Rohr.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer>
@@ -190,6 +199,8 @@
 
   
 
+
+  
 
   </body>
 </html>
