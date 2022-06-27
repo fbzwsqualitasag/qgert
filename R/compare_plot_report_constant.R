@@ -301,6 +301,22 @@ get_default_plot_opts_cas <- function(){
               vec_sex         = c("Bull", "Cow")))
 }
 
+#' @title Default Plot Options For KER
+#'
+#' @description
+#' Return a list with specific defaults and constants that are used
+#' to produce the plot comparison report for the de/regression (KER).
+#'
+get_default_plot_opts_ker <- function(){
+  # return list of default options
+  return(list(ge_dir_stem     = "/qualstorzws01/data_zws/ker/work",
+              arch_dir_stem   = "/qualstorzws01/data_archiv/zws",
+              rmd_templ       = system.file("templates/compare_plots.Rmd.template", package = 'qgert'),
+              rmd_report_stem = "ge_plot_report_ker",
+              vec_breed       = c("bv", "rh"),
+              vec_sex         = c("Bull", "Cow")))
+}
+
 ## -- Defaults for WEANING ---------------------------------------------------
 
 #' @title Default Plot Options For WEANING
